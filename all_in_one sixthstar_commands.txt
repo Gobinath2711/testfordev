@@ -1,0 +1,2879 @@
+STEPS
+Synopsis:
+1.  new mail ID in Zimbra admin console 
+2.  Add Multiple users in Zimbra
+3.  Terminate an account / change Ip address/ change quota/ change plan/ Modify account (need check)
+4.  Incoming Spam Mails
+5.  Outgoing mails and If a client asks to delete the spam mails.
+6.  Attachment size check or increase: in filter /server
+7.  to start the stopped Zimbra service
+8.  When you enter zmcontrol status it shows an error.
+9.  Quarantine steps of mail 
+10. Whitelist or blocklist in server : (Don't restart Hinduja must watch)
+11. Whitelist or blocklist in cPanel
+12. Full backup of Zimbra
+13. Mount Box mounting in a server:
+14. Filter rule & Server rule 
+15. Filter Domain Creation & filter configuring for Zimbra & Zextras
+16. Transfer or restore a cPanel account:
+17. Domain Transfer to another domain
+18. Mailq manager in cPanel
+19. Dedicated Server (shared hosting)
+20. MX toolbox 
+21. Logs:
+22. To raise a ticket & legendit & fangs have different filter server credentials
+23. How to add an account with internal and external access for mail with unlimited quota
+24. HHF closed ID mail id backup
+25. cache cleared commands
+26. Techindia outer domain and difference between inner and outer
+27. configuring outlook
+28. Forbidden 403 for any files
+29. Login credentials URL: 
+    https://cpanel.kmshc.com/
+30. Techindia  (add within domain for group)
+31. Zimbra commands
+32. HLF (IT Policy) = Restricted sender (local only ) this is IT Policy
+33. Give the account closed/active/locked status list (HHF) 
+34. Increase the disk quota
+35. Get all admin accounts details:
+36. HHF Backup ( Closed/Active/Locked id backup and store them in our storage box ) 
+37. SMTP Error: (Outgoing mails not sending) (550 recipient side error)
+38. Incoming mail not receiving problem :
+39. php not change
+40. aeonf.com
+41. Bandwidth Limit exceed and mails not send and receive
+42. To do stop mails goes to junk instead of inbox
+43. legenedit Ip allow (only in 199 server)
+44. LMTP error and user does not exist error 
+45. message not send and receive
+46. message not send and receive in Zimbra
+47. Missed backup
+48. Redirect the mail from one mail id to another (forward m-tutor)
+49. Giving spam expert tickets for outgoing mails got quarantined by classifications in filter:
+50. SSL
+51. Internal access (check in doc )
+52. Reset a password for mailid in cPanel:
+53. Zimbra Installation:
+54. Full Setup (in a new server)
+55. Spam generation in cPanel (compromise)
+56. whitelisted by commands in zextras
+57. All Incoming & outgoing mails one copy goes to an email id mails@nadeemleather.com 
+58. Incremental backup for Zimbra
+59. ERROR. message has lines too long for transport
+60. Installing CWP on Alma Linux 8
+61. Migrating a mail to one server to another different server 
+62. SPF record creation/SPF record generator
+63. Velammal Weekly Sync 
+64. Migration of a mail ID from one server to another server (get, post method)
+65. Create a mail ID in Techindia:
+66. Logs check
+67. Carbonio whitelist domain, if mails are going to junk, follow below three steps:
+68. firewall installation on server:
+69. Advanced feature enabled carbonio
+70. Outgoing copy for a Zimbra: 
+71. out of office box enabled script in Zimbra for the whole domain :
+72. To troubleshoot why Piler is not archiving emails on your Zimbra server, you can follow these steps:
+73 . Zimbra installation on Ubuntu 20
+74. Commands
+75. To make a Swap file:
+76. Imapsync Steps: 
+77. DL LIST WITH USERS Restore
+78. cPanel webmail site not working: (if it happens in 199 also we can do it without waiting no changes will happen by this, it is happening because of daily updates of cPanel) 
+79. Daily Backup script run: 
+80. Adding cPanel outgoing mails to the spam filter
+81. Plesk user domain password reset
+82. cPanel migration
+83. SCRIPT:
+84. Piler sync in new server
+85. Login Portal
+86. If we need the report of all mail delivery and rejected mail counts for any specific id 
+87. SSL for common name (common name means giving one domain ssl duration to another new domain.)
+88. cpanel single domain migration:
+89. Taking the specific id backup from the incremental backup.
+90. MX has an IP not a domain, if this case occurs there is a chance of mail reject in exim, but gmail, yahoo mails are working fine while sending mails to the domain.
+91. Extracting all incremental backup tar files to another storage box destination:
+92. Once extraction of all users got finished the use this below post script to update all the tar.gz files, which is in the folders
+93. API Postman credentials
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+1. new mailID in zimbra admin console 
+ 
+1. If one is give to add
+2. go to admin console
+3. select manage 
+4. create new 
+5. account name @ domain name and give last name only (no need to mention anything)
+6. set password and note it 
+7. after that click next to all only
+8. check advance how much quota has to be given (unlimited or limited)
+9. click finish id has been created
+10. search the mail id which has been created 
+11. login to normal user in admin console without 7071
+12. login with new mail id and new password
+13. if it login All done.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+2. Add Multiple user in zimbra
+
+1. Login with server 
+2. note all mail id in notepad
+3. after that enter zmprov ca emailid@domainname password (For Single User creation)
+   ex: zmprov ca chandru.r@kryptosrebar.com tJm8N3aYRK2yZ5jF
+4. preparing the excel sheet with proper commands 
+5. go to root and /mnt
+6. create a newfile, chown to zimbra permissions user and groups in zimbra, chmod 755 to that file
+7. vi that new file name 
+8. add all mail in that file and wq!
+9. su zimbra
+10. run a script ./filename.sh  (./mailss.sh)
+11. check in admin console created or not
+12. after that login with that any user id
+    mail.techindia.com (no need to mention any number)
+13. login with the id and setted password
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+3. Terminate an account / change ip address/ change quota/ change plan/ Modify account
+
+1. credential whm login
+2.list account
+3.domain search
+4.+ terminate account / change ip address/ change quota/ change plan/ Modify account
+5.confirmation ? 
+6.give yes
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+4. Incoming Spam Mails
+
+1. copy the spam id in notes
+
+2. credentianls login 
+
+3. login to antispam filter server
+
+4. clear with spam id that was (sender or receipient) (incoming or outgoing)
+
+5. search incoming or outgoing sender or receipient 
+
+5. must add customization of sender ip, deleivery ip, sender location etc, errorc classes (for which reason like filter rules etc..)
+
+6. after that note the ip and copy in notepad (no need to lock and change the password for incoming)
+
+7. if it was incoming spam (go to incoming  sender blocklist and block the domain)
+
+8. (if it was incoming go to incoming blocklist filtering rules)after that incoming blocklist filtering rules and block ip 
+
+9. after that login with server 
+
+10. cd /opt/zimbra/conf 
+
+11. vi salaocal.in
+
+12. add blacklist domain (dont restart the service when it was on Hinduja Leyland finance / CUTN)
+
+13. zmamavis restart && zmmtactl restart
+ 
+14. reject ip (block ip)
+
+15. route add -host 62.37.20.209 reject (reject)
+
+route del -host 14.177.238.228 reject (release)
+
+16. mail reply
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+5. Outgoing mails
+
+1. copy the compromised id in notepad
+2. go to filter server and check correctly in outgoing
+3. after checking go to Zimbra admin console and close the id change the pasword and open the id immediately
+4. after that go to var/log/zimbralog
+5. search originating local ip and copy that in notes
+
+6. use the compromised id command (use this command directly no changes need in this command)
+    grep sasl_user /var/log/zimbra.log | sed 's/.*sasl_username=//g' | sort | uniq -c | sort -nr | head
+
+7. Finding originating IP using “From Address(our compramising id)”
+     grep "from=<hr@m-tutor.com>" /var/log/zimbra.log | awk '{print $10}' |sort -nr -k 1 | sed -rn 's/.\[//;s/\].//p' | uniq -c | sort -nr -k 1
+
+ex: 
+     grep "from=<@voltechgroup.com>" /var/log/zimbra.log | awk '{print $10}' |sort -nr -k 1 | sed -rn 's/.\[//;s/\].//p' | uniq -c | sort -nr -k 1
+
+grep "from=<sikhiuthailand@voltechgroup.com>" /var/log/zimbra.log | awk '{print $10}' |sort -nr -k 1 | sed -rn 's/.\[//;s/\].//p' | uniq -c | sort -nr -k 1
+
+8. Block the ip in filter server and Server (If spam generating large quantity we may use )     
+9. route add -host 192.210.236.161 reject
+10. If client ask to delete the spam mails.
+11. login with their mail account.
+12. go to the inbox mail in from address copy the mailer deamon address and search.
+13. give ctrl+shift+A and delete
+(It deleted only mailer deamon mails)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+6. Attachment size check or increase: in filter /server
+
+ask them what you are using outlook or webmail.
+1. login with the client admin console 
+2. select the given mail or any mail and go to view mail
+3. attach any files by our local computer
+4. check the space
+5. if it less or more go to antispam filter server
+6. search for email attachments
+7. and set the limit
+8. If the limit is already max we have to inform the client our server has exceeded limit 40+ mb so kindly check your outlook email attachment limit and change that or else use webmail to send the attachment
+9. In zimbra (to check the fileuploasize in server attachment size)
+zimbra@mail1:/root$ zmprov gcf zimbraFileUploadMaxSize
+zimbraFileUploadMaxSize: 52428800
+zimbra@mail1:/root$ zmprov mcf zimbraFileUploadMaxSize 7340032
+zimbra@mail1:/root$ zmprov gcf zimbraFileUploadMaxSize
+zimbraFileUploadMaxSize: 7340032
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+7. to start the stopped zimbra service
+
+1. do in root - kill -9 $(ps aux | grep -i zimbra | awk {'print $2'})
+2. zmcontrol start
+3. zmcontrol status 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+8. When you are entering zmcontrol status it shows an error?
+SSL error (Tech india)
+
+[zimbra@mail techindiamail.com]$ zmcontrol status
+Unable to start TLS: SSL connect attempt failed error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed when connecting to ldap master.
+Cannot determine services - exiting
+
+if you facing this issue after instaling the SSl certificate do the follow.
+
+zmlocalconfig -e ldap_starttls_required=true
+zmlocalconfig -e ldap_starttls_supported=0
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+9. Quarantine steps of mail in filter server (we cannot quarantined release in server)
+
+1. Check the filter server logs
+2. if the status in quarantine
+3. Mark all the mails which are genuine and click status release and trained from quarantine
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+10. Whitelist or blocklist in server : (Don't restart hinduja / CUTN must watch)
+
+1. copy the ip in note pad, login server cd /opt/zimbra/conf 
+
+2. vi salaocal.in
+
+3. add blacklist domain (dont restart the service when it was on Hinduja Leyland finance)
+
+4. zmamavisdctl restart && zmmtactl restart
+ 
+5. reject ip (block ip)
+
+6. route add -host 77.32.148.105 reject
+
+7. route -n | grep 77.32.148.105 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+11. Whitelist or blocklist in cpanel
+
+1. login with WHM
+2. search fiewall, csf and quick allow / quick deny
+3. cphulk add ip
+4. spam filter in cpanel.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+12. Fullbackup of zimbra
+
+1. Login Server
+2. df -h
+3. cd /
+4. ls -lrth
+5. du -sh . 
+6. create new dir (newbackup date today date)
+7. go inside to new dir
+8. pwd copy in notepad
+9. cd /mnt
+10. ls -lrth
+11. cat fullbackup.sh (copy script in notepad)
+12. create new file in same name with any number 1 or 2
+13. chmod 755 file name
+14. ls -lrth
+15. su zimbra    
+16. zmprov -l gaa | wc -l
+17. zmprov -l gaa > newfile name
+18. cat filename | wc -l (check both have same numbers)
+19. vi newfile name with .sh
+20. edit the script and paste inside in this
+21. su root
+22. create screen 
+23. ls -lrth
+24. ./filename.sh
+25. ctrl AD
+26. After it got finished need to delete the old full backup
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+13. Mount Box mounting in a server:
+
+1. Login with file zilla
+2. create a new dir
+3. After copy the mount box command and edit the comment
+4. login to server and mount
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+14. Filter rule & Server rule 
+
+1. Check the ticket and check it got by stucked in rule or note
+2. If it is go to antispam cloud
+3. incoming & blacklist filtering rules 
+4. delete that filter
+
+Server rule 
+
+1. If the msg got quarantined by server by rules (any abuse content in there)
+2. we can't release quarantined mail in server
+3. in this case we may remove or change numbers in the filter rule which is in salocal.in file (body subject with some numbers)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+15. Filter Domain Creation
+
+1. go to antispam filter server
+2. Add domain
+Destination route hostname --- give your server hostname
+3. create SMTP Auth in manage users in authentication user 
+(Outgoing Documents)
+
+it's zextras 
+
+4. carbonio prov ms `zmhostname` zimbraMtaRelayHost smtp.antispamcloud.com:587
+  vi /opt/zextras/conf/relay_password
+  postmap /opt/zextras/conf/relay_password
+  postmap -q smtp.antispamcloud.com /opt/zextras/conf/relay_password
+  postconf -e smtp_sasl_password_maps=hash:/opt/zextras/conf/relay_password
+  carbonio prov ms `zmhostname` zimbraMtaSmtpSaslPasswordMaps lmdb:/opt/zextras/conf/relay_password
+  postconf -e smtp_sasl_auth_enable=yes
+  carbonio prov ms `zmhostname` zimbraMtaSmtpSaslAuthEnable  yes
+  postconf -e smtp_cname_overrides_servername=no
+  carbonio prov ms `zmhostname` zimbraMtaSmtpCnameOverridesServername no
+  postconf smtp_sasl_security_options
+  carbonio prov ms `zmhostname` zimbraMtaSmtpSaslSecurityOptions noanonymous
+  postconf -e smtp_sasl_security_options=noanonymous
+  carbonio prov ms `zmhostname` zimbraMtaSmtpSaslSecurityOptions noanonymous
+  postfix reload
+
+use this step in 4 th line (postconf -e)    smtp.antispamcloud.com smtpauth@vigilarebp.com:W@RldC@DegeU$&65
+while configuring new domain /relay_password inside paste this
+
+
+it's Zimbra
+
+zmprov ms `zmhostname` zimbraMtaRelayHost smtp.antispamcloud.com:587
+   64  211001 07:30:05 vi /opt/zimbra/conf/relay_password
+   65  211001 07:32:10 postmap /opt/zimbra/conf/relay_password
+   66  211001 07:32:23 postmap -q smtp.antispamcloud.com /opt/zimbra/conf/relay_password
+   67  211001 07:32:39 postconf -e smtp_sasl_password_maps=hash:/opt/zimbra/conf/relay_password
+   68  211001 07:32:56 zmprov ms `zmhostname` zimbraMtaSmtpSaslPasswordMaps lmdb:/opt/zimbra/conf/relay_password
+   69  211001 07:33:10 postconf -e smtp_sasl_auth_enable=yes
+   70  211001 07:33:25 zmprov ms `zmhostname` zimbraMtaSmtpSaslAuthEnable  yes
+   71  211001 07:33:36 postconf -e smtp_cname_overrides_servername=no
+   72  211001 07:33:46 zmprov ms `zmhostname` zimbraMtaSmtpCnameOverridesServername no
+   73  211001 07:33:55 postconf smtp_sasl_security_options
+   74  211001 07:34:05 zmprov ms `zmhostname` zimbraMtaSmtpSaslSecurityOptions noanonymous
+   75  211001 07:34:13 postconf -e smtp_sasl_security_options=noanonymous
+   76  211001 07:34:22 zmprov ms `zmhostname` zimbraMtaSmtpSaslSecurityOptions noanonymous
+   77  211001 07:34:33 postfix reload
+
+uninstall Antispam
+  zmprov gs `zmhostname` zimbraMtaRelayHost  - to know the filter server hostname (which relay has been connected to the filter)
+  zmprov ms `zmhostname` zimbraMtaRelayHost " "
+  postfix reload 
+
+5. After (Incoming documents apply)
+   Destination add ip
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+16. Transfer or restore a cPanel account:
+
+1. go to old server and take the full backup by using cpanel backup option (After few minutes full backup is in file manger as tar.)
+2. go to the new server and go to transfer or restore a cpanel account option
+3. Select the transfer option upload a file to restore & also enable the overwrite, and give the restore
+4. see above there is a warning message and wait for 5 mins after again give the restore now its started migrating
+5. once it finished change all quatos and go to the dns 
+6. change the mx and spf and A records ip belong to the new server
+7. drop the test mail and inform to the client
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+17. Domain Transfer to another domain
+
+1. Home WHM
+2. Search transfer tool
+3. Give ip & credentials
+4. Select domain what we need to transfer
+5. click moved it got transferred
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+18. Mailq manager in cpanel
+
+1. Go to mailque manager
+2. If genuine mail is there we have to click deliver to push
+3. If system is there we must delete
+4. If we push but it wont delivered mean we have to ask cpanel ticket
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+19. Dedicated Server (shared hosting)
+
+1. srv 199(200), srv 300, srv 400, srv 600 sixthstartech.co.in, srv.sixthstar.in, cerato 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+20. MX toolbox 
+
+1. To check MX add mail.FQDN / webmail.FQDN in MX Lookup
+2. To check DKIM FQDN:default in DKIM lookup
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+21. Logs:
+
+1. we may check login var/log/zimbra.log & opt/log/
+2. Particular time check in log: cat /var/log | grep user id
+3. we cannot push quarantined in server
+4. if it shows IMAPSSL means its outlook logs
+5. postque -f to push queued commands
+6. if already msgs got delievered check in filter server and server logs and their user inbox inform them that the msg got delivered.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+22. To rasie a ticket & legendit & fangs have different filter server credentials
+
+1. In filter server use spamexperst in credentials
+2. cpanel ticket in ceredentials
+3. legendit & fangs have different filter server credentials
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+23. How to add an account with internal and external access for mail with unlimited quota
+
+1. cd /
+2. cd support
+3. ls
+4. ssh -i m_tutor.pem centos@13.126.67.167 (symbioticinfo.com) is called as m_tutor
+5. sudo -i now check hostname if there is symbiotic.com we are now in m_tutor
+6. zmprov ca username@domain name password 
+7. no need to add local domain, restricted senders because they asked internal and external access, no need to mention unlimited quata it has default in unlimited quota
+
+Mtutuor
+internel mail access
+#create mail id
+#cd /opt/zimbra/common/conf
+#vi restricted_senders
+#postmap restricted_senders
+#postfix reload
+----------------------------------------------------------------------------------------------------------------------------------------------------
+24. HHF closed id mail id backup
+
+1. cd /mnt file create
+2. chmod 775
+3. vi filename.sh
+4. /opt/zimbra/bin/zmmailbox -z -m director.voms@voltechgroup.com getRestURL '/?fmt=tgz' > /mnt/director.voms@voltechgroup.com.tar.gz (placed in HHF storage box)
+5. ./filename.sh
+----------------------------------------------------------------------------------------------------------------------------------------------------
+25. cache cleared commands
+
+1. Free -h
+2. echo 3 > /proc/sys/vm/drop_caches
+----------------------------------------------------------------------------------------------------------------------------------------------------
+26. Techindia outer domain and difference between inner and outer
+
+1. telnet hostname 25 
+2. we need to get both sender and receipient ok in (outer and within domain)
+3. differenece between the outer and within is outer is all outerdomain except techindia so it has already accesiblity so they dont need to give any permitted, but in within it all indicates techindia.com so they are need to permitted
+4. telnet hostname 25 
+5. ehlo hostname
+6. mail from:, rcpt to:
+7. cd /opt/zimbra/common/conf
+8. cat protected receipients | grep id
+9. cat permitted_senders208 & vi  permitted_senders208 (for outer domain) (for inner domain means need to add both mail id's permitted sender list )
+10. postmap permitted_senders208
+11. postfix reload 
+12. after check with telnet
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+27. Configuring outlook:
+
+1. go to send and receive
+2. check 
+If port 22 doesnt allow, we need to use 587 for (multiple login attempts)
+ 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+28. Forbbiden 403 for any files
+
+1. Search lookup for the domain
+2. go inside the domain 
+3. Search file manager
+4. Search the file inside the file manager
+5. give permission 
+6. If it wont work check in html files permissions 750 is there 
+7. If it not there kindly checked with server any attributes is there
+8. If there is attribute remove that permission by using this command
+cd /home
+cd /biotis (username)
+[root@srv biotis]# chattr -i public_html
+after give chmod 750 biotis
+after lock with attribute again for safety 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+29. Login credentials url: https://cpanel.kmshc.com/
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+30. Techindia  (add within domain for group)
+1. DL Name not view in permitted send 
+2. need to check id is there if there is no id it is DL
+3. Need to add the id in DL after change into owner
+4. zmprov adlm groupname mailidname
+5. go to admin console and change ownername
+
+----------------------------------------------------------------------------------------------------------------------------------------------------   
+31. zimbra commands
+
+1. Create a New Account:
+  zmprov ca username@example.com password
+
+2. Delete an Account:
+  zmprov da username@example.com
+
+3. Add Alias to an Account:
+  zmprov aaa username@example.com alias@example.org
+
+4. Create a Distribution List:
+   zmprov cdl grocorporateexecutives@letsgro.co (DL name)
+
+5. Add Members to a Distribution List:
+  zmprov adlm listname@example.com member@example.org
+
+6. Grant Admin Rights to a User:
+  zmprov grr domain example.com usr username@example.com +adminLogin
+
+7. Grant Admin Rights to a Distribution List:
+  zmprov grr 
+listname@example.com usr username@example.com +adminLogin
+
+8. Change Account Password:
+  zmprov sp username@example.com newpassword
+
+9. Get Account Information:
+  zmprov ga username@example.com
+
+10. List All Accounts:
+  zmprov gaa
+
+11. List All Distribution Lists:
+  zmprov gadl
+
+12. Set Account Attributes:
+  zmprov ma username@example.com attributeName attributeValue
+
+13. Get all Active/closed/Locked accounts status
+  zmaccts
+
+14. Get All admin Accounts
+  zmprov -l gaaa 
+
+15. To remove a member in DL 
+  zmprov rdlm groupname idname
+
+16. To get all users in a DL (HHF)
+  zmprov gdlm groupname 
+17. Change the status of the user id status 
+  zmprov ma sixthstar@sixthstar.in zimbraAccountStatus Active
+
+18. Zimbra Admin account creation, this will create an additional admin account with the password of 'test123':
+  zmprov ca support@sixthstar.in test123 zimbraIsAdminAccount TRUE
+
+19. This will transform a normal existed user account into an admin account
+  zmprov ma support@sixthstar.in zimbraIsAdminAccount TRUE
+
+20. Changing the status of an ID.
+ zmprov ma ejaz.r@voltechgroup.com zimbraAccountStatus closed (locked/active/closed)
+
+21. Mail forwarding list for each ID's
+root@mail2 /mnt # su zimbra
+zimbra@mail2:/mnt$ for account in `zmprov -l gaa`; do zmprov ga $account zimbraPrefMailForwardingAddress; done > /mnt/hhfForwording.txt
+
+22. zextras@mail:/root$ carbonio prov gs zmhostname zimbraFileUploadMaxSize
+# name mail.vecurawellness.com
+zimbraFileUploadMaxSize: 10485760
+
+23. Setting limit for Imap Connections
+ zmprov gs mail.vcaregroup.in zimbraImapMaxConnections
+  738  240222 12:54:26 zmprov ms `zmhostname` zimbraImapMaxConnections 2500
+  739  240222 12:54:39 zmprov gs mail.vcaregroup.in zimbraImapMaxConnections
+
+24. Setting Mail
+zmprov ms `zmhostname` zimbraMailContentMaxSize 80000000
+  686  240221 17:22:34 zmprov modifyConfig zimbraMtaMaxMessageSize 102400000
+  687  240221 17:22:45 zmprov modifyConfig zimbraFileUploadMaxSize 80000000
+
+25. This will transform a normal existed user account into an admin account (in this example futur-admin will become an admin) :
+zmprov ma futur-admin@domain.com zimbraIsAdminAccount TRUE
+
+26.Zimbra Admin account creation
+
+ This will create an additional admin account with the password of 'test123':
+ zmprov ca testadmin@domain.com test123 zimbraIsAdminAccount TRUE
+
+27. Change the status of an account:
+ zmprov ma sixthsupport@hindujahousingfinance.com zimbraAccountStatus active
+
+28. Remove  a member in a DL:
+ zmprov rdlm corporatecomm@hindujaleylandfinance.com babyk.kanakaraj@hlfservices.in 
+
+29. Enable Advance feauture by after purchasing advance feature liscence:
+ zmprov gs mail.hindujahousingfinance.com zimbraAmavisMaxServers
+ zmprov gs mail.hindujahousingfinance.com zimbraClamAVMaxThreads
+ zmprov gs mail.hindujaleylandfinance.com zimbraAmavisMaxServers
+
+30. command to check the single user outbox duration
+
+ zmprov ga user@domain.com zimbraPrefOutOfOfficeCacheDuration
+ zmprov ma user@domain.com zimbraPrefOutOfOfficeCacheDuration 0 =======> this command is used to set the unlimited days for outbox duration
+
+31. Restricted outgoing mails per second
+ zimbra@mail2:~/common/conf$ zmprov gs mail.hindujaleylandfinance.com | grep zimbraLmtpNumThreads
+ zimbraLmtpNumThreads: 40
+ zmmtactl restart
+
+32. If we use GET/EXPORT & IMPORT for an ID it, by using this it give the comparision difference of both ID folders in the mails
+ zmmailbox -v -z -m jayashree.v@vcaregroup.in gaf
+
+33. Get mailbox size for specific ID:
+ 1. zmprov getMailboxInfo logesh@sixthstar.in
+
+ 2. zmmailbox -z -m logesh@sixthstar.in gms
+5.91 MB
+
+34. To check the pop thread (for setting server handle request the pop users limit)
+ zmprov gcf zimbraPop3NumThreads
+ zimbraPop3NumThreads: 300
+
+35. To check the pop thread (for setting server handle request the pop users limit) used for kingfa pop user authentication prompt shown
+  zmprov mcf zimbraPop3NumThreads 150
+  zmmtactl restart
+
+36. Purge flesh script for Outlook in the server
+  su - zimbra -c "/opt/zimbra/libexec/zmproxypurge -a msb@splinfra.com"
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+32. HLF (IT Policy) = Restricted sender (local only ) this is IT Policy 
+
+1. copy id in note pad
+2. go to cd /opt/common/conf
+3. go to restricted senders
+4. vi local only
+5. add the id local only
+6. crm status
+
+Node List:
+  * Online: [ mail1 mail2 ]
+
+Full List of Resources:
+  * Resource Group: SERVICE:
+    * apifloatip        (ocf::heartbeat:apifloatip):     Started mail2
+    * fs_vol_drbd200    (ocf::heartbeat:Filesystem):     Started mail2
+    * zimbra_start      (ocf::btactic:zimbra):   Started mail2
+  * Clone Set: vol_drbd200-clone [vol_drbd200] (promotable):
+    * Masters: [ mail2 ]
+    * Slaves: [ mail1 ]
+
+Failed Resource Actions:
+  * zimbra_start_monitor_120000 on mail1 'not running' (7): call=61, status='complete', exitreason='', last-rc-change='2024-06-21 14:55:33Z', queued=0ms, exec=0ms
+
+7. check mailque will be in less
+8. drbdadm status
+drbdres200 role:Primary
+  disk:UpToDate
+  peer role:Secondary
+    replication:Established peer-disk:UpToDate
+ (If you are in up mail server it shows primary in drbdres200 role: primary , if it not there is secondary (dont do in secondary on forst line))
+
+9. crm maintenance on
+10. crm status
+
+Cluster Summary:
+  * Stack: corosync
+  * Current DC: mail2 (version 2.0.3-4b1f869f0f) - partition with quorum
+  * Last updated: Sat May 25 12:50:53 2024
+  * Last change:  Sat May 25 12:50:48 2024 by root via cibadmin on mail2
+  * 2 nodes configured
+  * 5 resource instances configured (1 BLOCKED from further action due to failure)
+
+              *** Resource management is DISABLED ***
+  The cluster will not attempt to start, stop or recover services
+
+
+(need to show Resource management is DISABLED )
+11. postmap local domains / restricted senders
+12. postfix reload 
+13. zmcontrol status
+14. mailq
+15. crm maintenance off
+16. crm status
+17. drbdadm status
+(all should be normal)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+33.Give the account closed/active/locked status list (HHF) 
+
+1. create a file in /mnt
+2. chmod 775
+3. zmaccts for counts
+4. zmprov -l sa "(zimbraAccountStatus=closed)" > created file in mnt
+6. dllistwith users run by script
+
+#!/bin/bash
+# File: save_dl_members.sh
+
+input_file="dlistmemJUNE2024.txt"
+output_dir="/mnt/dlistwithmeJUNE2024"
+
+if [[ ! -f $input_file ]]; then
+    echo "File $input_file not found!"
+    exit 1
+fi
+
+if [[ ! -d $output_dir ]]; then
+    echo "Directory $output_dir not found!"
+    exit 1
+fi
+
+while read -r dl; do
+    if [[ ! -z "$dl" ]]; then
+        output_file="${output_dir}/${dl}.txt"
+        echo "Saving members of $dl to $output_file"
+        zmprov gdlm "$dl" > "$output_file"
+    fi
+done < "$input_file"
+
+
+5. make it in excel or download that in file from server
+6. .sh script file run in screen
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+34. Increase the disk quota
+
+1. Login with credentials
+2. List account
+3. + sign
+4. increase disk quota
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+35. Get all admin accounts details:
+
+1. zmprov -l gaaa (copy all and send)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+36. HHF Backup ( Closed/Active/Locked id backup and store them in our storage box ) 
+
+1. file create 755 permission
+2. /opt/zimbra/bin/zmmailbox -z -m aakash.singhal@hindujahousingfinance.com getRestURL '/?fmt=tgz'> /mnt/closed/aakash.singhal@hindujahousingfinance.com.tar.gz
+3. script run.sh in screen
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+37. SMTP Error: (Outgoing mails not sending) (550 receiepient side error)
+
+1. DKIM,SPF,DMARC Issues
+2. IP block, Domain Block receipient end
+3. Check Logs
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+38. Incoming mail not receiving problem :
+
+1. Logs check
+2. Antispam logs check
+3. Blacklist check ip
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+39. php not change
+
+1. go to multiphp manager
+2. search the domain and select the php
+3. if shows any error follow cpanel ticket (already there)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+40. Our  aeonfinmail@gmail.com and aeonfoutmail@gmail.com is not working please kindly check as soon as possible.
+
+1. go to mx and login with server 
+2. cd /home check the domain is there, after go to cd /etc
+3. cat cpanel_exim_system_filter
+4. check the below line
+headers remove X-Spam-Subject
+endif
+5. if there is no script it got restarted automatically 
+6. in such case we need to take a script in 
+cpanel_exim_system_filter_old
+7. copy that and paste in  cpanel_exim_system_filter (new)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+41. Bandwidth Limit exceed and mails not send and receive
+
+1. go to list accounts
+2. modify accounts 
+3. increase bandwidth
+4. mails not send and receive check in disk quaota first
+5. after that we have to check the all mail id's spaces and chek how to do they configure in outlook (POP3/IMAP)
+6. If pop3 we have to ask billing , if it not, we have to make the ids configure in pop3 to client
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+42. To do stop mails goes to junk instead of inbox (cpnel)
+
+1. check the webmails messages got junked or not
+2. If any specific msgs only got stucked in junk we have to whitelist the specific domains
+3. go to spam filter and show additional configurations
+
+   To do stop mails goes to junk instead of inbox (Zimbra)
+1. whitelist the domain
+2. adjust the spf record with google and filter if it have.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+43. legenedit ip allow (only in 199 server)
+     Because legend it 6 or 8 domain hosted in our 199 server,
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+44. LMTP error and user does not exist error 
+1. check mx and login to cpanel 
+2. check the email is there or not (user does not exist)
+3. if there is no go and check in server cd /home/domain/mail/damin
+4. grep with username shown in cpanel for that id
+5. if the id is there give rm -rf id username and delete that 
+6. after do tst mail in web mail to the receipient id now the issue has been solved
+7. both server and cpanel does not have that id we have to create again that id and delete that after the issues solved.
+8. after all got finished check in track delivery in action msg got delivered through antispam or not.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+45. Message not send and receive 
+
+1. check mx and login if cpanel is here 
+2. go to email accounts and check the account is restricted or not / mail quato in WHM/ increase mail space
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+46. message not send and receive in zimbra
+
+1. status stopped
+2. check log
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+47. Missed backup
+
+1. It used for 3 month backups of all ids (check overall space we need to utilize in storage box)
+2. check the free storage in the storage box
+3. and create one dir in filezilla
+4. create cd /mnt one dir
+5. search script
+6. and edit the script and mention date like month/date/year wise to month/date/year wise
+7. create script file.sh , paste the script and after save and quit change permissions create screen
+8. ./filename.sh
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+48. Redirect the mail from one mail id to another (forward m-tutor)
+
+1. login to m-tutor in sixthstar
+2. cd /support
+3. take ssh (in history)
+4. zmprov ma <from forwardingmail> zimbraPrefMailForwardingAddress <to mail address>,<to mailaddress>
+ ex: zmprov ma rathinapushpam@m-tutor.com zimbraPrefMailForwardingAddress ayyas.b@m-tutor.com,sathiyaprabha.s@m-tutor.com
+5. check in admin console symbiotic <mail forward update or not>
+----------------------------------------------------------------------------------------------------------------------------------------------------
+49. Giving spamexpert tickets for outgoing mails got quarantined by classifications in flter:
+
+1. We need to raise ticket in spamexpert
+2. Hai Team,
+domain name: hindujaleylandfinance.com
+sender murali.s@hindujaleylandfinance.com,
+receient support@sixthstar.in
+Outgoing mails got quarantined, kindly release those mails from quarantined and also sumitrajsingh@hindujaleylandfinance.com, ID got compromised we blocked the source IP and made the ID password strong and we still monitoring that ID too. kindly help us to remove this address. This is the production-related address. Kindly help us ASAP!!
+----------------------------------------------------------------------------------------------------------------------------------------------------
+50. SSL 
+
+SSL For positive, Wildcard, Multidomain
+
+Types of ssl:
+
+1.positive ssl 
+2.Wildcard ssl
+3.multi domain ssl
+=======================================================================================================================================================================
+1.positive ssl
+          This type of ssl is used to the particular domain like "star.sixthstar.in"
+
+step1: First check in ssl portal the mentioned domain star.sixthstar has an renewed date of ssl or present or not in the portal https://www.ssls.com/
+
+step2 :After we should install the Positive SSl for the domain star.sixthstar.in
+
+         =============> By using below-command to the openssl and the output it gives csr and private key for the domain star.sixthstar.in
+       
+         command:  openssl req -nodes -newkey rsa:2048 -keyout commercial.key -out commercial.csr
+
+step3: Login to the sixthstar server:
+ 
+       =======> Go to cd /ssl
+       =======> then create directory like sixthstar.in
+then run the openssl command,
+
+[root@star mnt]# cd /ssl
+[root@star ssl]# ls
+commercial.csr  commercial.key  larch.in  sixthstar  vasanth  vigilarebp.com
+[root@star ssl]# mkdir pmchri.ac.in
+[root@star ssl]# cd pmchri.ac.in
+[root@star pmchri.ac.in]# openssl req -nodes -newkey rsa:2048 -keyout commercial.key -out commercial.csr
+Generating a 2048 bit RSA private key
+.+++
+......................+++
+writing new private key to 'commercial.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [XX]:IN
+State or Province Name (full name) []:TamilNadu
+Locality Name (eg, city) [Default City]:Chennai
+Organization Name (eg, company) [Default Company Ltd]:Medical college
+Organizational Unit Name (eg, section) []:Medical
+Common Name (eg, your name or your server's hostname) []:*.pmchri.ac.in
+Email Address []:
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+[root@star pmchri.ac.in]# ls
+commercial.csr  commercial.key
+[root@star pmchri.ac.in]# cat commercial.csr
+-----BEGIN CERTIFICATE REQUEST-----
+MIICvTCCAaUCAQAweDELMAkGA1UEBhMCSU4xEjAQBgNVBAgMCVRhbWlsTmFkdTEQ
+MA4GA1UEBwwHQ2hlbm5haTEYMBYGA1UECgwPTWVkaWNhbCBjb2xsZWdlMRAwDgYD
+VQQLDAdNZWRpY2FsMRcwFQYDVQQDDA4qLnBtY2hyaS5hYy5pbjCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAMANyi3Q+xx1uvaJbAiD4Nidp88Wv3OMfr40
+C3V9q2yJ5ZGEQMbxAxzCq4OFohe71Cn6oaQ1L/XPlCULrcagb4dnlw/zlkaC7/z2
+oJZEwtfFpp2hcrpeoCa3SzO2FlEbTra130LXx2MAthjWQWnZywzVfCsBfGB73Yuh
+nBM2Yra9rqtC3kGI1qvnBu1ZkZkqyF4bMG08GjDVBzPdgLfZP1xfaLig5OwiMIsk
+Z5KOYVdvme4tV17qJppCQvR0l62ivI0qevwZ9XBzNxZ616mm9LMBZD1Al8fnFNPt
+S18m43f+1s8SdSvTZcl+FPwCfgWKJqDOGl1Yo6ohG8gcF0MQR88CAwEAAaAAMA0G
+CSqGSIb3DQEBCwUAA4IBAQCMd0dBG2/hopQSWd1NokQqneXGhR6XCeTe0V/nxs5h
+KjZIXGZQBcgtWFvpCI3B9g5zI4iCCjjfyrHV72BFBXvkaNdi03hX3bUT7T8OOVXk
+/wnyDgf1ZZPDQAE6L+EPDpzrBgMY3ksZCbI+IWTbCtJsrrWMWEG8NZaKgSt+jbVT
+eQUynu50rgBV9HOW/aBUPcbDROnS/lRs/joMjxZFYeTq5sRUf8SPW0VghdP1+BWB
+XFFWBHizy52mGKXyJTmPL/2hs7neBioymF0ZMQTdixKRJO9pOQzSGeOPlKXlq3Y0
+1NW+KbbnTKeEcbwnHs20liWs9SL34skukNHW3+d+Pipe
+-----END CERTIFICATE REQUEST-----
+[root@star pmchri.ac.in]#
+
+step 4: After Generating the csr key and private key 
+       ====> copy the csr and open chrome then check csr decoded by using below link
+                                                                     ==============> https://www.sslshopper.com/csr-decoder.html
+       =====> After checking the csr decoder is done then given the csr code to the nasheer sir
+Step 5: After that csr given to nasheer sir
+       =====> we need to verify by using three methods 
+                   1.cname based verification
+                   2.mail based verification
+                   3.http based verification
+      =================================================================================================================================
+         1.cname based verification 
+                         =======> ssl provider given the cname records then we need to point the record in sixthstar.in dns 
+         Example: SSl provider given cname verification like below,
+               
+         ==>    MAIN VALIDATION: DNS-BASED CHANGE
+                Create a CNAME record for asirvad.com at your DNS provider:
+
+      hosts===> _95F64E64E027B94AD368F288D3050975
+                CNAME
+     value====> 36951453808E0B3690724281A856E5C4.AC534264C5EB4336E1CD1A1D2EF54E87.665ea4ccbdc44.comodoca.com
+                60 or min possible value
+     =====================================================================================================================================
+       2. mail based verification:
+                       =====>By using his verification they given the link to the webmaster@sixthstar.in
+                       =====>open the admin console and then search webmaster mail id the verification mail has been come to the webmaster mail id.
+         Example:
+            
+                Domain Control Validation for mail.vcaregroup.in
+
+                Dear webmaster@vcaregroup.in,
+
+                We have received a request to issue an SSL certificate for
+                mail.vcaregroup.in
+
+                Subject: 
+                      Sixthstar Technologies
+                This order was placed by a person whose email address is nasheer@sixthstar.in
+
+                To permit the issuance of the certificate please browse here
+                and enter the following "validation code":
+                wN6hD36Mm1e97foQukWEDP62pusHLiQ9
+
+                         ======> Enter the above validation code and validated successfully, we will manually go to the ssl.com.
+                         ======> then tell in the ssl chat we have validated successfully 
+                         ======> Finally , they provide 
+                                                =====> commercial.crt,commercial_ca.crt,pkc file
+=======================================================================================================================================
+        3. http based verification ,
+                         =====> ssl provider given the file ,we need to upload the files in their mentioned path in the server
+                                        ===>if you have any doubt you can ask in ssl chat they will help further. ========================================================================================================================================                                                                                
+step 6: Finally go to the ssl.com site then download the files in local
+
+step 7: After we need to upload the files in the server by follow below methods,
+      
+      Example:
+              after got a certificate file 
+[root@mail ~]# hostname
+mail.skalki.in	
+# cd /tmp
+# touch commercial.crt
+# touch commercial_ca.crt
+# chown zimbra:zimbra commercial.crt
+# chown zimbra:zimbra commercial_ca.crt
+# vi commercial.crt /{ cert file Kindly paste content or key file of the .crt #/}
+#vi commercial_ca.crt /# { bundle file Kindly paste content or key file of the ca.crt #/}
+#cd /opt/zimbra/ssl
+[root@mail ssl]# ls
+zimbra zimbra.20200727234003 zimbra.20200727234009 zimbra_bak
+zimbra.20200727233959 zimbra.20200727234006 zimbra.20200728104538
+zimbra_bak_23jul21
+[root@mail ssl]# cd zimbra
+[root@mail ssl]# cd commercial
+[root@mail ssl]# ls -lrth
+          ======> edit already commercial.key filename in present path
+          ======>Rename commercial.key to commercial.key_old1
+          ======> create file,
+               ====> touch commercial.key
+               ====> chown Zimbra:zimbra commercial.key
+               ====> chmod 755 commercial.key 
+               ====> vi commercial.key { copy the content from where you generated the openssl command ,there you can find the commercial.key that one you should paste here in the file}
+[root@mail ~]# su zimbra
+[zimbra@mail root]$ cd
+[zimbra@mail ~]$ /opt/zimbra/bin/zmcertmgr verifycrt comm /opt/zimbra/ssl/zimbra/commercial/commercial.key /tmp/commercial.crt /tmp/commercial_ca.crt
+[zimbra@mail ~]$ /opt/zimbra/bin/zmcertmgr deploycrt comm /tmp/commercial.crt /tmp/commercial_ca.crt
+[zimbra@mail ~]$ zmcontrol status
+[zimbra@mail ~]$ zmcontrol restart
+[zimbra@mail ~]$ zmcontrol status
+
+step 8:
+Finally, go to site star.sixtstar.in then check if ssl is updated then we are successfully installed the positive ssl for the domain "star.sixtstar.in"
+
+===================================================================================================================================================================================================
+2.wildcard ssl:
+ step 1: wildcard ssl which means to update a ssl for subdomain  
+          =====> sixthstar.in is an main domain 
+          =====> star.sixtstar.in, www.sixthastar.in ,mail.sixthstar.in is an subdomain 
+          =====> if we install the ssl certificate for multi domain like   *.sixtstar.in
+ step 2: Follow the same steps as I mentioned in the positive ssl.
+==================================================================================================================================================================================================
+3.multi-domain ssl:
+          =====> Multi-domain ssl means in an one mail server contains multiple domain for example, star.sixthstar.in mail server contains multiple domain, we need tp install the ssl certificate for all the domain
+ 
+    step 1: Admin console
+            CSR Generator in Zimbra Admin Console
+            1) Open the admin Panel
+            2) Go to configure and click the certificate and click settings and install certificate
+            3) Enter the details
+            4) Download the csr in the local desktop 
+   step 2: Given the csr key to the nasheer sir and do the same steps as I mentioned in the above positive ssl
+=======================================================================================================================================================================
+
+
+51. Internal access (check in doc )
+
+1. https://wiki.zimbra.com/wiki/Block_user_to_send_email_locally_or_externally
+----------------------------------------------------------------------------------------------------------------------------------------------------
+52. Reset a password for mailid in cpanel:
+
+1. list account and cpanel login
+2. search mail and manage 
+3. rest password and check in
+4. https://webmail.seabasecom.org/
+----------------------------------------------------------------------------------------------------------------------------------------------------
+53. Zimbra Installation:
+
+https://computingforgeeks.com/how-to-install-zimbra-collaboration-on-ubuntu/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+54. Full Setup (in a new server)
+
+1. Server buy
+2. OS install
+3. zimbra /carbonia
+4. Migration (imapsync)
+5. DNS (live)
+
+--------------------------------------------------------------------------------------------------------------------------
+55. Spam generation in cpanel (compromise)
+
+1. login with mx
+2. List accounts and change the compromise password and suspended the outgoing mails go to whm mail delivery reports
+3. search ip if it is not there search in cPanel track delivery
+4. block the source ip in whm cphulk and cPanel spam filters and also block domain and id in spam filters
+5. after use this in whm terminal to remove all frozen mails exim -bp| exiqgrep -iz | xargs exim -Mrm
+6. remove all queued in mail queue manager (need to use filter search spam sender id/hostname and date now delete all (be carefull in this) )
+7. unsuspended the domain after few hours
+
+--------------------------------------------------------------------------------------------------------------------------
+56. whitelisted by commands in zextras
+
+1. su - zextras
+2. carbonio prov md kingfaindia.com +amavisWhitelistSender kingfaindia.com
+ex: 2. carbonio prov md hostname domain +amavisWhitelistSender given whitelisting domain
+
+3. zmamavisdctl restart && zmmtactl restart
+--------------------------------------------------------------------------------------------------------------------------
+57. All Incoming & outgoing mails one copy goes to an email id mails@nadeemleather.com 
+
+1. check aeonf cpanel_exim_ystem_filter_old (in server)
+2. cat cpanel_exim_system_filter
+4. check the below line
+headers remove X-Spam-Subject
+endif
+5. copy all and edit that 
+mails@nadeemleather.com - is a id that need all copy 
+and add all email id in the domain with these by following ways.
+
+
+if "${if def:header_X-Spam-Subject: {there}}" is there
+then
+    headers remove Subject
+    headers add "Subject: $rh_X-Spam-Subject:"
+    headers remove X-Spam-Subject
+endif
+
+if
+ $header_from: contains "support@sixthstar.org"
+ and $header_to: does not contain "sixthstar.org"
+then
+ fail text "Messages cannot be sent from $header_from to external domains. $header_to is not an internal domain."
+seen finish
+endif
+if not first_delivery
+then
+finish
+endif
+
+if first_delivery
+and ("$h_to:, $h_cc:" contains "accounts@nadeemleather.com")
+then
+unseen deliver "mails@nadeemleather.com"
+endif
+
+if $header_from: contains "accounts@nadeemleather.com"
+then
+unseen deliver "mails@nadeemleather.com"
+endif
+
+6. check with test mails
+7. It will restarted automatically, if we neeed to avoid this we have to follow soma instructions
+8. create a file in /usr/local/cpanel/etc/exim/sysfilter/options/new file cpanel_system_filter_new
+9. give chmod 644 permission to the file 
+10. copy the exact content in cpanel_exim_system_filter and paste it in new file cpanel_system_filter_new /usr/local/cpanel/etc/exim/sysfilter/options/new file cpanel_system_filter_new
+11. after give pwd and copy the exact path /usr/local/cpanel/etc/exim/sysfilter/options/cpanel_system_filter_new
+12. go to exim configuration >> filters>> System Filter File setting paste the exact path /usr/local/cpanel/etc/exim/sysfilter/options/cpanel_system_filter_new
+13. click save and exit now, check the mails has been sent or not and check copy also.
+14. if it not worked just go go to exim configuration >> filters>> System Filter File setting paste the exact path /usr/local/cpanel/etc/exim/sysfilter/options/cpanel_system_filter_new rever it to default.
+
+--------------------------------------------------------------------------------------------------------------------------
+58. Incremental backup for Zimbra
+
+1. check in each backup sheet mention for Zimbra.
+2. login and check sever storage in /, if it above 95 % give alert messge to clients (Server Storage Alert) wih the server and crontab -l
+3. view in script (crontab -l) cat /mnt/incremental_backup.sh
+4. check in ZBACKUP=/mnt/mailbackup (for destination)
+5. cd /mnt/mailbackup
+6. ls -lrth
+7. check there is one backup_file_020524-080524.tgz (tgz format file)
+8. check the size and go inside the incrementalbackup and check the size
+9. and mv backup_file_020524-080524.tgz incrementalbackup (move tar file tgz file to incremental backup)
+10. after delete the remaining file which is mentioned in this date only backup_file_020524-080524.tgz (02-05-2024 to 08-05-2024).
+11. no need to mark in sheet.
+
+--------------------------------------------------------------------------------------------------------------------------
+59. ERROR. message has lines too long for transport
+
+1. Go to exim configurations
+2. and check below Maximum line length for SMTP transports (Minimum: 1; Maximum: 1,000,000) [?]
+3. change the number 2048 to some other 3072 (increase gp wise)
+
+--------------------------------------------------------------------------------------------------------------------------
+60. Installing CWP on Alma Linux 8
+
+https://control-webpanel.com/installation-instructions#step4
+
+1. https://148.251.245.107:2031
+2. hostnamectl set-hostname
+3. nano /etc/hosts
+4. dnf update -y
+5. cd /usr/local/src
+6. wget http://centos-webpanel.com/cwp-el8-latest
+7. sh cwp-el8-latest -r yes --phpfpm 7.4 --softaculous yes
+
+If you are facing any issues with GPG key Failed error in Alma Linux 8 try the below commands
+
+curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+yum clean all
+yum update && yum upgrade -y
+
+--------------------------------------------------------------------------------------------------------------------------
+61. Migrating a mail to one server to another different server 
+
+from
+/opt/zimbra/bin/zmmailbox -t 0 -z -m nandhini.s@vcaregroup.in getRestURL '/?fmt=tgz' > /mnt/nandhini.s@vcaregroup.in.tar.gz
+
+to
+/opt/zimbra/bin/zmmailbox -t 0 -z -m deepa@splinfra.com postRestURL "/?fmt=tgz&resolve=skip" /mnt/spljan_backup/deepa@splinfra.com.tar.gz 
+
+--------------------------------------------------------------------------------------------------------------------------
+62. SPf record creation/Spf record generator
+
+IPv4: server ip
+Hostname: optional
+includes: spf.antispamcloud.com
+policy: softfail
+
+--------------------------------------------------------------------------------------------------------------------------
+63. Velammal Weekly Sync
+
+step 1:login as velammal server 2 
+            ssh root@10.10.10.188
+step 2:go to cd /mnt
+=====> ls -lrth
+=====>cd muserdata ---->rm -rf *
+=====>cd  muserpass  ------>rm -rf *
+=====>cat musers.txt ------>remove the user id inside this file 
+
+step3:Go to server 1
+=====>cd /mnt
+=====>cat musers.txt  ------>remove the user id inside this file ---then---add the new mail id which newly created 
+                                                                                                       ---->how to check it to newly created mail id by using zmprov -l gaa
+=====>cd muserdata ---->rm -rf *
+=====>cd  muserpass  ------>rm -rf *
+
+step 4:use this below command to add the user details on the muserdata and the muserpass
+
+su zimbra
+for i in `cat /mnt/musers.txt`; do zmprov  -l ga $i userPassword | grep userPassword: | awk '{ print $2}' > /mnt/muserpass/$i.shadow; done
+for i in `cat /mnt/musers.txt`; do zmprov ga $i  | grep -i Name: > /mnt/muserdata/$i.txt ; done
+
+su root
+
+step 5:use this below command to share the those files "musers.txt,muserpass,muserdata"
+
+=======> scp -r musers.txt muserpass muserdata root@10.10.10.188:/mnt (in different server) & (in same server)   scp -vr /mnt/splfull /mnt/splinfrarecent
+
+step 6:go to second server by using ssh command,
+        then,
+========>cd /mnt
+========>ls -lrth
+To change the permission on the newly copied files on muserdata,muserpass
+
+[root@mail muserdata]# chmod 755 ravis@velammalmedicalcollege.edu.in.txt
+[root@mail muserpass]# chmod 755 ravis@velammalmedicalcollege.edu.in.shadow
+
+========>cat usercri.sh
+
+su zimbra
+========>run the above script ./usercri.sh ((this script are used to add the new mail id on the second server ,the entire data has been transferred to the second server))
+
+
+step 7:add the new user to the user1.txt on the cd /mnt
+========>[root@mail mnt]# vi user1.txt
+========>add the new user on the user1.txt file
+========>[root@mail mnt]# crontab -l
+========>0 */4 * * * cd /mnt && sh imap.sh > /dev/null 2>&1
+========>cat imap.sh
+=======>Below are the imapsync script,
+#!/bin/bash
+USERS="user1.txt"
+for i in `cat $USERS`
+do
+imapsync --host1 10.10.10.185 --user1 $i --authuser1 sixthstar@velammalmedicalcollege.edu.in --password1 Welcome@#1234: --host2 10.10.10.188 --user2 $i --authuser2 sixthstar@velammalmedicalcollege.edu.in --password2 Sixth*54321: --ssl1 --ssl2 --noauthmd5 --split1 100 --split2 100 --exclude All Mails use --addheader 'Message-ID' --search "SENTSINCE 11-Nov-2022" --nofoldersizes nocheckselectable --nofoldersizes --skipsize
+done
+
+step 8: this is the script directory,
+=======> cd LOG_imapsync
+=======>ls -lrth
+=======>cat new mail id file "2024_03_22_13_09_00_ayyappan@velammalmedicalcollege.edu.in.txt"
+
+
+Transfer started on               : Fri Mar 22 12:25:17 2024
+Transfer ended on                 : Fri Mar 22 12:26:55 2024
+Transfer time                     : 98.2 sec
+Folders synced                    : 15/15 synced
+Messages transferred              : 5
+Messages skipped                  : 2763
+Messages found duplicate on host1 : 0
+Messages found duplicate on host2 : 1097
+Messages void (noheader) on host1 : 0
+Messages void (noheader) on host2 : 0
+Messages deleted on host1         : 0
+Messages deleted on host2         : 0
+Total bytes transferred           : 1243931 (1.186 MiB)
+Total bytes duplicate host1       : 0 (0.000 KiB)
+Total bytes duplicate host2       : 290489682 (277.033 MiB)
+Total bytes skipped               : 998618790 (952.357 MiB)
+Total bytes error                 : 0 (0.000 KiB)
+Message rate                      : 0.1 messages/s
+Average bandwidth rate            : 12.4 KiB/s
+Memory consumption                : 335.7 MiB
+Biggest message                   : 964259 bytes (941.659 KiB)
+Memory/biggest message ratio      : 365.1
+Detected 0 errors
+
+finally 0 error detected which means mails are syncing correctly there was no error, while using imap sync
+===================================================================================================================================
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+64. Migration a mail ID from one server to another server (get, post method)
+
+1. Create a file mailbkp and add migrating users in that new file, give chmod 755 & chown root:root (in Host 1 server)
+2. zmprov -l gaa |grep santhanam.accounts@vcaregroup.in > mailbkp 
+2. Create a new dir newmailbackup1, give chmod 755 & chmod root:root (this is destination dir where the user backups got stored in tar format)
+3. create a new vi file in .sh 
+
+#!/bin/bash
+USERS="/mnt/user.txt"
+for i in $(cat $USERS)
+do
+    /opt/zimbra/bin/zmmailbox -t 0 -z -m $i getRestURL "//?fmt=tgz" > /mnt/mailbackupuser/$i.tar.gz
+done
+
+4. Go to screen & /file.sh (run script)
+5. After finished check in cd newmailbackup1 & du -sh * 
+6. download all tar files locally in downloads by mentioning the accurate path 
+7. Login to Host 2 server 
+8. crosscheck the new mail id is there or else need to create that
+9. create a mailbkp file give chmod 775 and chown Zimbra:zimbra
+10. zmprov -l gaa |grep santhanam.d@vecurawellness.com > mailbkp
+10. Create a dir in /mnt/bkp & chmod 775, chown Zimbra:zimbra & (upload all the tar files stored in locally)
+11. If the user is less create a screen for each user run this command (user is high create the script)
+12. If the user is high in numbers create a script file vi file.sh in /mnt, chmod 755 & chmod root:root  (run in screen)
+
+#!/bin/bash
+ USERS="/mnt/mailbkp"
+ for i in `cat $USERS`
+ do
+/opt/z/bin/zmmailbox -z -m $i postRestURL -u https://mail.vecurawellness.com "//?fmt=tgz" > /mnt/bkp/$i.tar.gz
+ done
+
+13. Create a screen for each user and run the below command (If less user follow this)
+     /opt/zextras/bin/zmmailbox -t 0 -z -m santhanam.d@vecurawellness.com postRestURL -u https://mail.vecurawellness.com "/?fmt=tgz&resolve=skip" /mnt/bkp/santhanam.accounts@vcaregroup.in.tar.gz
+
+14. after finished check the size and go to view mail in admin console for each mail id and check the mail got synced or not.
+15. If you want specific date mail get post go to admin console click preferences, export & import options advanced features and give the date and download locally 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+65. Create a mail ID in Techindia:
+
+1. Add given mail ID's in Zimbra admin console first and set password for the ID and crosscheck with login and go to the server
+
+ 1. hostname
+ 2. cd /opt/zimbra/common/conf
+ 3. ls
+ 4. cat protected_recipients
+ 5. cat protected_recipients | grep ti-sreeja@techindiamail.com
+ 6. vi protected_recipients (add the new given mail id (ti-sreeja@techindiamail.com permitted_senders_list210) in this protected_recipients)
+ 7. cat protected_recipients | grep ti-sreeja@techindiamail.com
+ti-sreeja@techindiamail.com permitted_senders_list210
+ 8. vi permitted_senders210 (add the new mail id and give ok) (ti-sreeja@techindiamail.com ok)
+ 9. cat permitted_senders210 
+ti-sreeja@techindiamail.com ok
+ 10. vi update_protected_recipients
+
+(copy the exact 2 lines that belongs to the same permitted_senders210   & paste the exact line below the last line & also edit the permitted_senders210 number only)
+
+postmap lmdb:/opt/zimbra/common/conf/permitted_senders210
+echo "rebuild permitted_senders210.."
+
+ 11. su zimbra
+ 12. /opt/zimbra/common/conf/update_protected_recipients
+ 13. su root (beacuase we not allocated Zimbra permission to main.cf, it has root permission only)
+ 14. vi main.cf 
+
+want to add below in this lines only the permitted_senders_list209 numbers only)
+
+permitted_senders_list210 = check_recipient_access lmdb:/opt/zimbra/common/conf/permitted_senders210, reject
+
+(want to add last-below in this lines and add the permitted_senders_list209 numbers only)
+
+smtpd_restriction_classes = permitted_senders_list,permitted_senders_list5,permitted_senders_list6,permitted_senders_list7,permitted_senders_list8,permitted_senders_list9,permitted_senders_list10,permitted_senders_list11,permitted_senders_list12,
+
+ 15. cat main.cf
+ 16. su zimbra
+ 17. postfix reload
+ 18. hostname
+ 19. telnet mail.techindiamail.com 25
+ 
+ehlo mail.techindiamail.com
+mail from:ti-sreeja@techindiamail.com
+250 2.1.0 Ok
+rcpt to:support@sixthstar.in
+554 5.7.1 <ti-sreeja@techindiamail.com>: Sender address rejected: Access denied
+
+ID Succesfully created
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+66. Logs check
+
+sender
+/opt/zimbra/libexec/zmmsgtrace -s sixthstar@kvcn.edu.in
+
+receiver
+/opt/zimbra/libexec/zmmsgtrace -r 'kgconmix@gmail.com' 
+
+hole file log 
+/opt/zimbra/libexec/zmmsgtrace -r 'itsupport@splinfra.com' /var/log/zimbra* 
+
+/opt/zimbra/libexec/zmmsgtrace -s corp.comm@hindujaleylandfinance.com -r corporatecomm@hindujaleylandfinance.comm /var/log/zimbra*
+
+/opt/zimbra/libexec/zmmsgtrace -s no-reply-0syrp@dropsbox.net -r itsupport@splinfra.com 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+67. Carbonio whitelist domain ,if mails are going to junk , follow below three steps:
+
+step 1: carbonio prov md vecurawellness.com +amavisWhitelistSender airtel.com
+
+     ======> carbonio prov gd vecurawellness.com amavisWhitelistSender {which domains are added in the amavis, we can check by using the command}
+step 2: cd /opt/zextras/conf
+              ======> vi salocal.cf.in	(whitelist the domain)	
+step 3: Go to the path 
+           ====>   /opt/zextras/data/spamassassin/localrules
+           ====>   vi sauser.cf	(add the whitelist domain)
+step 4: zmamavisdctl restart && zmmtactl restart
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+68. firewall installation on server:
+
+apt install firewalld
+systemctl start firewalld
+ systemctl enable firewalld
+
+firewall-cmd --permanent --add-port=7071/tcp
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="183.82.28.77" port protocol="udp" port="7071" accept'
+firewall-cmd --permanent --remove-rich-rule='rule family="ipv4" source address="103.249.207.194" port protocol="tcp" port="7071" accept'
+firewall-cmd --reload
+firewall-cmd --list-all
+
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="49.12.196.142" port protocol="tcp" port="10050" accept'
+----------------------------------------------------------------------------------------------------------------------------------------------------
+69. Advanced feature enabled carbonio
+
+carbonio prov ma edp@kingfaindia.com carbonioFeatureChatsEnabled TRUE
+carbonio prov ma edp@kingfaindia.com carbonioFeatureChatsAppEnabled TRUE
+carbonio prov ma edp@kingfaindia.com zimbraFeatureMobileSyncEnabled TRUE
+carbonio prov ma edp@kingfaindia.com carbonioFeatureTeamEnabled TRUE
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+70. Outgoing copy for a Zimbra: 
+
+How to Create auto Bcc for sender mails for Zimbra 8.7
+https://dilliganesh.wordpress.com/2016/09/21/how-to-create-auto-bcc-for-sender-mails-for-zimbra-8-7/
+[root@mail ~]# cd /opt/zimbra/conf  
+[root@mail conf]# cat sender_bcc
+@kryptosrebar.com       copy@kryptosrebar.com
+[root@mail conf]# cd /opt/zimbra/common/conf/
+[root@mail conf]# cat main.cf
+sender_bcc_maps = lmdb:/opt/zimbra/conf/sender_bcc
+postfix reload
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+71. outofoffice box enabled script in Zimbra for whole domain :
+
+#!/bin/bash
+# Get a list of all email accounts
+accounts=$(zmprov -l gaa)
+
+# Loop through each account and set the zimbraPrefOutOfOfficeCacheDuration to 0
+for account in $accounts
+do
+   zmprov ma "$account" zimbraPrefOutOfOfficeCacheDuration 0
+done
+
+echo "zimbraPrefOutOfOfficeCacheDuration has been set to 0 for all users."
+
+===================================================================================================================================
+Auto-reply outbox enabled script for single user in the Zimbra server:
+
+#!/bin/bash
+
+# Set the user email address
+USER="singleuser@domain.com"
+
+# Set the zimbraPrefOutOfOfficeCacheDuration to 0 for the user
+echo "Setting zimbraPrefOutOfOfficeCacheDuration to 0 for $USER"
+zmprov ma $USER zimbraPrefOutOfOfficeCacheDuration 0
+
+echo "Completed setting zimbraPrefOutOfOfficeCacheDuration for $USER."
+
+===================================================================================================================================
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+72. To troubleshoot why Piler is not archiving emails on your Zimbra server, you can follow these steps:
+
+### 1. Check Piler Service Status
+
+First, ensure that the Piler service is running:
+
+bash
+sudo systemctl status piler
+
+
+If the service is not running, you can start it:
+
+bash
+sudo systemctl start piler
+
+
+To enable it to start on boot:
+
+bash
+sudo systemctl enable piler
+
+
+### 2. Review Piler Logs
+
+Check the Piler logs for any errors or warnings. The log files are usually located in /var/log/piler. Use the following command to view the logs:
+
+bash
+sudo tail -f /var/log/piler/piler.log
+
+
+Look for any errors or messages that indicate why the archiving might be failing.
+
+### 3. Check Zimbra Configuration
+
+Ensure that Zimbra is correctly configured to forward emails to Piler for archiving. You need to verify that the always_bcc setting in Zimbra is correctly pointing to Piler.
+
+1. **Check the current always_bcc setting**:
+
+bash
+zmprov gacf | grep zimbraBccD
+
+
+2. **If necessary, set or update the always_bcc setting to forward to Piler**:
+
+bash
+zmprov mcf zimbraBccD "archiving@piler.example.com"
+zmprov mcf zimbraBccDAddress "archiving@piler.example.com"
+zmprov mcf zimbraArchiveEnabled TRUE
+
+
+Replace archiving@piler.example.com with the actual email address used for archiving in Piler.
+
+### 4. Verify Email Flow
+
+Make sure that emails are being forwarded to Piler. You can check this by sending a test email and seeing if it appears in the Piler logs or in the Piler web interface.
+
+### 5. Check Network Configuration
+
+Ensure that the network configuration between Zimbra and Piler is correct and that there are no firewall rules blocking the communication. Verify that the Piler server is reachable from the Zimbra server.
+
+bash
+ping piler.example.com
+
+
+### 6. Verify Disk Space
+
+Check if the disk space on the Piler server is sufficient. Lack of disk space can cause issues with archiving.
+
+bash
+df -h
+
+
+### 7. Check Cron Jobs
+
+Piler uses cron jobs to perform various tasks. Ensure that the cron jobs are running correctly.
+
+bash
+crontab -l -u piler
+
+### 8. Piler Configuration
+
+Check the Piler configuration file, usually located at /etc/piler/piler.conf, to ensure all settings are correct.
+
+bash
+sudo nano /etc/piler/piler.conf
+
+
+Look for any misconfigurations that might be causing the archiving to fail.
+
+### 9. Restart Services
+
+Restart the Zimbra and Piler services to ensure all changes take effect.
+
+bash
+sudo systemctl restart zimbra
+sudo systemctl restart piler
+
+
+By following these steps, you should be able to identify and resolve the issue with Piler not archiving emails on your Zimbra server. If you encounter specific errors or issues during these steps, please provide those details for further assistance.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+73 .Zimbra installation on ubuntu 20
+
+install image
+init 6
+apt update && sudo apt -y full-upgrade
+[ -f /var/run/reboot-required ] && sudo reboot -f
+vi /etc/hosts (refer another Zimbra server for reference)
+apt install git (put last line # #2a01:4f8:10a:2a5::2 Ubuntu-2004-focal-64-minimal)  set exactly (88.99.26.119 mail.tightwell-dynamic.com   mail)
+cd ~
+git clone https://github.com/jmutai/scripts.git
+cd scripts/zimbra/
+ls
+./zimbra_bind_setup_ubuntu.sh (if ubuntu)
+Input Zimbra Base Domain. E.g example.com : tightwell-dynamic.com
+Input Zimbra Mail Server hostname (first part of FQDN). E.g mail : mail
+Please insert your IP Address : 88.99.26.119
+cd ~/
+cd /opt
+wget https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_4179.UBUNTU20_64.20211118033954.tgz
+tar xvf zcs-8.8.15_GA_*.tgz
+cd zcs*/
+ls
+./install.sh
+(If GPG Key error shows) : Follow below
+apt install dirmngr
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9BE6ED79
+./install.sh
+ignore dns cache and Install zimbra-imapd (BETA - for evaluation only) [N]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+74. Commands:
+1. To copy a file server to server by using rsyn: (It uses to avoid duplicates)
+  rsync -avz public_html root@164.52.212.163:/home/sholagasco/  (one server to other server if it failed try with port different port transfer)
+  rsync -avz -e 'ssh -p 9788' mail.apiui.letsgro.co.tar.gz sixthstar@46.4.38.130:/mnt  (in different port transfer)
+  rsync -avz /mnt/splfull/ /mnt/splinfrarecent  (in same server)
+
+
+2. To copy a file server to server by using scp : (It cause duplicates)
+  scp -r /mnt/gobi root@88.99.26.119:/mnt
+
+3. Best error solving with duplicates and each day synchronization
+  imapsync --host1 "192.9.200.111" --user1 "quality" --password1 "head@777" --host2 "88.99.26.119" --ssl2 --user2 "quality@tightwell-dynamic.com" --password2 "head@     777" --debug --delete2duplicates --syncinternaldates
+
+4. Single mail ID post command:
+  /opt/zimbra/bin/zmmailbox -t 0 -z -m testsixthstar@tightwell-dynamic.com postRestURL "/?fmt=tgz&resolve=skip" /mnt/headoffice.tar.gz
+
+5. Basic Imap settings 1 st we need to do this before imapsync:  
+
+  zmprov modifyServer mail.itaresshoes.com zimbraFileUploadMaxSize 200000000
+  zmprov ms zmhostname zimbraMailContentMaxSize 440401920
+  zmprov mcf zimbraMtaMaxMessageSize 440401922
+  zmlocalconfig -e socket_so_timeout=30000000
+  zmlocalconfig -reload
+
+6. Basic Imapsync command & script
+   imapsync --host1 "192.9.200.111" --user1 "maintenancedtl120" --password1 "system@106" --host2 "88.99.26.119" --ssl2 --user2 "maintenancedtl120@tightwell-dynamic.com" --password2 "system@106" --debug
+
+SCRIPT
+#!/bin/bash
+USERS="/mnt/user50.txt"
+for i in cat $USERS
+do
+imapsync --host1 144.76.5.120 --user1 $i --authuser1 sixthstar@vcareherbsconcept.com --password1 Sixth*54321 --host2 178.162.198.171 --user2 $i --authuser2 sixthstar@vcareherbsconcept.com --password2 Sixth*543211 --ssl1 --ssl2 --noauthmd5 --split1 100 --split2 100
+done
+
+7. To delete a specific ID mails in queue & deferred command
+view:
+sudo ~/libexec/zmqstat
+
+delete:
+/opt/zimbra/common/sbin/postsuper -d ALL deferred
+
+id Wise:
+/opt/zimbra/common/sbin/postqueue -p | egrep -v '^ *\(|-Queue ID-' | awk 'BEGIN { RS = "" } { if ($7 == "masthan.a@voltechgroup.com") print $1} ' | tr -d '*!' | /opt/zimbra/common/sbin/postsuper -d -																							
+
+8. To check packet loss when its not ping: check where the loss been in between their servers like (router, gateway,fireawall where the packet has been loss)
+ mtr -s 1000 -r -c 200 176.9.99.157
+ mtr -r -c 100 176.9.99.157
+ mtr -n -r -c 100 176.9.99.157
+
+9. Delete a Specific date mails by using this command:
+find . -type f -newermt 2023-03-04 ! -newermt 2023-03-05 -delete (it represent the time 2023-03-04 12.00 am to 2023-03-05 12.00 am, it delete only inbetween these time mails only)
+
+10. To delete an ip in server
+ ip addr del 94.130.65.92/26  
+ systemctl start network
+
+11. Blacklist to stop mails in inbox
+ zmprov md herms-it.in +amavisBlacklistSender kingfaindia.com
+
+12. Find command
+ find . -type f -exec chmod 755 {} \;
+ find . -type d -exec chmod 755 {} \;
+
+13. To find an object
+ find -name filename/dir name, find /opt -iname filename/dirname
+
+14. Find a type of an file / dir 
+ find -type f -name filename, find -type d -name dirname
+
+15. To find a specifc extension file
+ find /opt -name ‘*.pdf’
+
+16. it shows all 644 files/dir permission
+  find /opt -type f -perm 644,  find /opt -type d -perm 644
+
+17. it shows all file/dir except 644 permission
+ find /opt -type d ! -perm 644, find /opt -type f ! -perm 644
+
+18. listing except SUID files
+ find /opt -type f ! -perm /u=s 
+
+19. listing except SGID files
+ find /opt -type d -perm /g=s
+
+20. To locate all pdf extension file and also execute all the pdf
+ find /opt -name ‘*pdf’ -exec chmod (no) {} \; - ({} \;
+
+21. To find empty dir/ file
+ find /opt -type d -empty
+
+22. to find and copy all files related to natasha with a new location
+ find / -user natasha -exec cp arv {} /destination \; 
+
+23. To find greater 25 mb and less than 50 mb files that mean (inbetween sizes of the files)
+ find /root -size +25M -size -100M 
+
+24. To see 2 days before created files
+ find /opt -ctime 2
+
+25. To find inbetween creating time 
+ -c stands for creating, to find inbetween creating time, -m stands for modify, to modify inbetween time
+ find /opt -ctime +10 -ctime -50 
+ find /opt -mtime +10 -mtime -50 
+
+26.  To create an archive file. Even if your copy the original file will be there because it is a drawback of linux
+ tar -cvf new tar file name /copying file path /copying destination newfile name 
+ tar -cvf gobi . (Present)
+
+27. to view the content of all archive files 
+ tar -tf data.tar 
+
+28. To add any other archive file
+ tar -uf data.tar /opt test.txt
+
+29. To extract the tar file
+ tar -xvf tarfilename
+
+30. To extract the file 
+ tar -xvf data.tar -C /var
+
+31. Tocompress using gzip
+ gzip data.tar
+
+32. To decompress gzip 
+ gunzip data.tar.gz
+
+33. to view zip file 
+ zcat data.tar.gz
+
+34. to create a file with 755 permissiona nd also in root
+ touch dllist && sudo chmod 755 dllist && sudo chown root dllist
+
+35. to copy a file by using scp
+ scp -rp emails.txt userpass userdata root@10.10.10.188:/mnt/newupdate
+
+36. Cos comamnt (create the need named test in admin console)
+zmprov SetAccountCos yogeshkumar.l@hindujahousingfinance.com test
+
+37. Screen commands:
+
+1. yum install screen 
+2. screen -S newscreenname - To create a screen
+3. screen A+D - to come out of the screen 
+4. screen -ls - to list out the existing screen 
+5. screen ctrl+D - to terminate the screen while using inside the screen
+6. screen -X -S screenname quit
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+75. To make Swap file:
+
+To resize the swap file in Ubuntu 20.04 to 90 GB, you can follow these steps:
+
+1. Turn off all running swap processes: (OPTIONAL)
+sudo swapoff -a
+
+2. Resize the swap file: Since you want to increase the swap size to 90 GB and your current swap file is 32 GB, you need to add 58 GB more. You can use the fallocate command to resize the swap file:
+sudo fallocate -l 90G /swapfile
+
+3. Make the file usable as swap:
+sudo mkswap /swapfile
+
+4. Turn the swap on:
+sudo swapon /swapfile
+
+5. Verify the new swap size:
+swapon --show
+or
+free -h
+
+6. Please ensure you have enough free disk space on your system to accommodate the new swap size. The df -h command output you provided shows that your / partition has sufficient available space for this operation123.
+
+Remember to adjust the fstab file if necessary to ensure the swap settings persist after a reboot. Here’s an example line for /etc/fstab:
+
+/swapfile none swap sw 0 0
+
+After completing these steps, your system should have a 90 GB swap file in place.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+76. Imapsync Steps:
+
+https://syslint.com/blog/tutorial/zimbra-server-migration-and-zimbra-account-transfer-the-perfect-method/
+
+1. Intall Imapsnyc first
+1. In ubuntu
+Link: https://imapsync.lamiral.info/INSTALL.d/INSTALL.Ubuntu.txt
+
+Step 1
+sudo apt-get install  \
+libauthen-ntlm-perl     \
+libclass-load-perl      \
+libcrypt-openssl-rsa-perl \
+libcrypt-ssleay-perl    \
+libdata-uniqid-perl     \
+libdigest-hmac-perl     \
+libdist-checkconflicts-perl \
+libencode-imaputf7-perl     \
+libfile-copy-recursive-perl \
+libfile-tail-perl       \
+libio-compress-perl     \
+libio-socket-inet6-perl \
+libio-socket-ssl-perl   \
+libio-tee-perl          \
+libjson-webtoken-perl   \
+libmail-imapclient-perl \
+libmodule-scandeps-perl \
+libnet-dbus-perl        \
+libnet-ssleay-perl      \
+libpar-packer-perl      \
+libproc-processtable-perl \
+libreadonly-perl        \
+libregexp-common-perl   \
+libsys-meminfo-perl     \
+libterm-readkey-perl    \
+libtest-fatal-perl      \
+libtest-mock-guard-perl \
+libtest-mockobject-perl \
+libtest-pod-perl        \
+libtest-requires-perl   \
+libtest-simple-perl     \
+libunicode-string-perl  \
+liburi-perl             \
+libtest-nowarnings-perl \
+libtest-deep-perl       \
+libtest-warn-perl       \
+make                    \
+time                    \
+cpanminus
+
+Step 2
+wget -N https://raw.githubusercontent.com/imapsync/imapsync/master/imapsync
+3.  ls
+4. chmod +x imapsync
+5. ./imapsync --testslive
+6. imapsync --version (install the latest version)
+
+Step 2 
+ Clearly have the host1 (source ip) & host2 (destination ip) ID's & passwords and authuser1 (have a admin ID for authuser then only we can run a script or else there is a only chance o run all id's manually)
+
+Step 3
+Basic Imap settings 1 st we need to do this before imapsync:  
+
+  zmprov modifyServer mail.itaresshoes.com zimbraFileUploadMaxSize 200000000
+  zmprov ms zmhostname zimbraMailContentMaxSize 440401920
+  zmprov mcf zimbraMtaMaxMessageSize 440401922
+  zmlocalconfig -e socket_so_timeout=30000000
+  zmlocalconfig -reload
+
+Step 4
+Basic Imapsync command & script
+   imapsync --host1 "192.9.200.111" --user1 "maintenancedtl120" --password1 "system@106" --host2 "88.99.26.119" --ssl2 --user2 "maintenancedtl120@tightwell-dynamic.com" --password2 "system@106" --debug
+
+SCRIPT (If we have a auth user we have to follow the script)
+#!/bin/bash
+USERS="/mnt/user50.txt"
+for i in cat $USERS
+do
+imapsync --host1 144.76.5.120 --user1 $i --authuser1 sixthstar@vcareherbsconcept.com --password1 Sixth*54321 --host2 178.162.198.171 --user2 $i --authuser2 sixthstar@vcareherbsconcept.com --password2 Sixth*543211 --ssl1 --ssl2 --noauthmd5 --split1 100 --split2 100
+done
+
+Step 5 (For each id)
+409  ls
+  410  mkdir testsync
+  411  cd testsync
+  412  ls
+  413  pwd
+  414  list.txt
+  415  vi list.txt
+  416  vi imap.sh
+  417  cat imap.sh
+  418  cat /mnt/testsync/list.txt
+  419  chmod 755 list.txt imap.sh
+  420  chown zimbra:zimbra list.txt imap.sh
+  421  ls -lrth
+  422  ls
+  423  ./imap.sh
+  424  ls
+  425  cd LOG_imapsync
+  426  ls
+  427  cat 2024_05_27_18_27_32_logesh@sixthstar.in.txt
+  428  ls
+  429  cd ..
+  430  ls
+  431  ./imap.sh
+  432  ls
+  433  cat imap.sh
+  434  cat list.txt
+  435  pwd
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+77. DL LIST WITH USERS Restore
+
+#!/bin/bash
+# File: save_dl_members.sh
+
+input_file="dllistusers2024-06-01.txt"
+output_dir="/mnt/dllistmem"
+
+if [[ ! -f $input_file ]]; then
+    echo "File $input_file not found!"
+    exit 1
+fi
+
+if [[ ! -d $output_dir ]]; then
+    echo "Directory $output_dir not found!"
+    exit 1
+fi
+
+while read -r dl; do
+    if [[ ! -z "$dl" ]]; then
+        output_file="${output_dir}/${dl}.txt"
+        echo "Saving members of $dl to $output_file"
+        zmprov gdlm "$dl" > "$output_file"
+    fi
+done < "$input_file"
+
+Example:
+
+#!/bin/bash
+# File: save_dl_members.sh
+
+input_file="NEW DL LIST FILE"   ------ (zmprov gadl > new file)
+output_dir="/mnt/CREATED NEW DIR"   (Destination folder)
+
+if [[ ! -f $input_file ]]; then
+    echo "File $input_file not found!"
+    exit 1
+fi
+
+if [[ ! -d $output_dir ]]; then
+    echo "Directory $output_dir not found!"
+    exit 1
+fi
+
+while read -r dl; do
+    if [[ ! -z "$dl" ]]; then
+        output_file="${output_dir}/${dl}.txt"
+        echo "Saving members of $dl to $output_file"
+        zmprov gdlm "$dl" > "$output_file"
+    fi
+done < "$input_file"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+78. Cpanel webmail site is not working: (if it is happen in 199 also we can do it without waiting no changes will happen by this, it is happening because of daily updates of cpanel)
+
+1. systemctl status exim If it is inactive make restart them in whm
+2. systemctl status httpd (httpd is apache) If it is inactive make restart them in whm
+3. go to Whm search Mail server exim and go in
+4. restart the Exim Mail Server
+5. go to Whm search HTTP Server (Apache)
+6. restart the Apache Web Server
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+79. Daily Backup script run: 
+
+1. mkdir backup - create a dir for destination
+2. create a file backup.sh and paste the script in that file:
+
+#!/bin/bash
+IFS="$"
+
+now=$(date +"%m-%d-%Y")
+mkdir -p /mnt/backup/$now
+tempdir=/mnt/backup/$now
+targetdir=/mnt/backup
+archivefile="`date +%Y-%m-%d_%H-%M`_legendit.tar"
+cd /var/cpanel/users
+
+find * | while read CPUSER; do
+  echo "Now processing ${CPUSER} ..."
+  /scripts/pkgacct ${CPUSER} $tempdir
+  done
+# Generating single archive file
+tar -cf  ${targetdir}/${archivefile} ${tempdir}
+rm -rf $tempdir
+
+3. login file zilla and create a dir by using client name
+
+4. ready the command with a server destinatition dri nd mount it 
+mount.cifs -o user=u382042,pass=zUMKSBJaQYCZJ24z  //u382042.your-storagebox.de/backup/legendit /mnt/backup
+
+5. After crontab -e set cron and save
+10 20 * * 2,6 /mnt/backup.sh
+
+6. if you want today it self means
+create screen and run ./backup.sh
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+80. Adding cpanel outgoing mails to the spam filter
+
+ Create a domain in antispam
+-->General
+-->create domain
+Then
+point anti-spam ip in mx record for incoming.
+
+then
+
+For outgoing refer the link
+
+https://documentation.n-able.com/spamexperts/userguide/Content/B_Admin%20Level/outgoing-filtering/cpanel-whm-ip-auth-sd.htm
+
+Create a text file /etc/spamexperts_domains
+add the domain in that file
+
+do it in whm-->eximfilter-->advancededitor and make the upper-mentioned codes
+
+see the document focusedly don't miss anything.
+replace SMARTHOST to antispamcloud   
+this all in the mentioned doc follow that carefully.
+
+
+restart the exim.
+
+goelsteel.com 	
+
+Add the following to the POSTMAILCOUNT section:
+
+smarthost_dkim:
+  driver = manualroute
+  domains = !+local_domains
+  condition = ${if match_domain{$sender_address_domain}{lsearch;/etc/spamexperts_domains}}
+require_files = "+/var/cpanel/domain_keys/private/${sender_address_domain}"
+  # Exclude null sender messages from relaying via the smarthost
+  condition = ${if or {{!eq{$sender_address}{}} {!eq{$sender_host_address}{}}}}
+  transport = remote_smtp_smart_dkim
+  route_list = $domain smtp.antispamcloud.com::587
+ 
+smarthost_regular:
+  driver = manualroute
+  domains = !+local_domains
+  condition = ${if match_domain{$sender_address_domain}{lsearch;/etc/spamexperts_domains}}
+  # Exclude null sender messages from relaying via the smarthost
+  condition = ${if or {{!eq{$sender_address}{}} {!eq{$sender_host_address}{}}}}
+  transport = remote_smtp_smart_regular
+  route_list = $domain smtp.antispamcloud.com::587
+
+
+Add the following to the TRANSPORTSTART section 
+
+remote_smtp_smart_dkim:
+  driver = smtp
+  hosts_require_tls = *
+  message_linelength_limit = 4096
+  interface = ${if exists {/etc/mailips}{${lookup{$sender_address_domain}lsearch*{/etc/mailips}{$value}{}}}{}}
+  helo_data = ${if exists {/etc/mailhelo}{${lookup{$sender_address_domain}lsearch*{/etc/mailhelo}{$value}{$primary_hostname}}}{$primary_hostname}}
+  dkim_domain = $sender_address_domain
+  dkim_selector = default
+  dkim_private_key = "/var/cpanel/domain_keys/private/${dkim_domain}"
+  dkim_canon = relaxed
+headers_add = "${perl{check_mail_permissions_headers}}"
+ 
+remote_smtp_smart_regular:
+  driver = smtp
+  hosts_require_tls = *
+  message_linelength_limit = 4096
+  interface = ${if exists {/etc/mailips}{${lookup{$sender_address_domain}lsearch*{/etc/mailips}{$value}{}}}{}}
+
+
+antispam(master-ticket id-850773)-----> refer this link for individual domain logs conf for cpanel
+
+What you first need to do is set 'Re-authenticate as' 'sender domain' for the auth IP user 148.251.87.11 (see screenshot).
+You then need to create an auth domain user on the 'goelsteel.com' domain and tick the Re-authentication permitted box.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+81. Plesk userdomain password reset
+
+1. Login to plesk panel by using - https://IP:8443
+2. search option customer
+3. search domain name
+4. go into that domain
+5. in right side there is change login info
+6. and set the password apply and give ok 
+https://domainuseraname:8443
+check the credentials
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+82. cPanel migration
+
+1. Old Server specs/storage & take the full backup of the old storage (New server storge alert to seniors), Names servers check and updates with seniors
+2. Take the excel sheets of all domains in the source server (A record list, Mx record list and Dns record, Php version, Php extensions, Unwanted Domain list for each domains)
+3. Go to new server and put OS in the newserver (ask seniors)
+4. Cpanel installation 
+5. Cpanel licence (ask seniors)
+6. Now WHM has been opened & install firewall in CLI
+7. Now search Transfer Tool in new server 
+8. Give ip & credentials
+9. Select domain what we need to transfer
+10. click copy it got transferred
+11. Check all domains got transferred or not, (Crosscheck Records for all domains, PHP extension (in easy apache) , PHP version (multiphp manager) )
+12. Go to CLI change the hostname (exactly set the old server hostname in new server)
+13. cat /etc/hosts
+
+[root@srv199 etc]# cat /etc/hosts
+### Hetzner Online GmbH installimage
+127.0.0.1               localhost.localdomain localhost
+::1             localhost ip6-localhost ip6-loopback
+fe00::0         ip6-localnet
+ff00::0         ip6-mcastprefix
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+ff02::3         ip6-allhosts
+2a01:4f9:2a:2926::2             srv199
+95.216.42.207           srv199.sixthstar.in srv199
+
+14. After do this in new server
+[root@srv199 etc]# cat /etc/resolv.conf
+# Generated by NetworkManager
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+83. SCRIPT:
+
+1. Missed backup with date
+ 
+#!/bin/bash
+
+# Define the paths and backup directory
+ZHOME=/opt/zimbra
+ZBACKUP=/mnt/bkp/newget
+DATE=$(date +%d%m%y-%d%m%y) # This will dynamically set the date range for the backup
+ZDUMPDIR=$ZBACKUP/$DATE
+ZMBOX=/opt/zimbra/bin/zmmailbox
+
+# Define the query for the date range
+query="&query=after:07/17/2024 before:07/24/2024"
+
+# Create the backup directory if it doesn't exist
+if [ ! -d "$ZDUMPDIR" ]; then
+    mkdir -p "$ZDUMPDIR"
+    if [ $? -ne 0 ]; then
+        echo "Error: Failed to create backup directory $ZDUMPDIR"
+        exit 1
+    fi
+fi
+
+echo "Running zmprov ..."
+
+# Loop through the mailboxes listed in hhfactivemissed-2740.txt and back them up
+while IFS= read -r mbox; do
+    echo "Generating files from backup for $mbox ..."
+    # Backup command with debug output
+    $ZMBOX -z -m "$mbox" getRestURL "//?fmt=tgz$query" > "$ZDUMPDIR/$mbox.tar.gz"
+    if [ $? -ne 0 ]; then
+        echo "Error: Failed to backup mailbox $mbox"
+    else
+        echo "Successfully backed up $mbox to $ZDUMPDIR/$mbox.tar.gz"
+    fi
+done < emails1.txt
+
+echo "Backup completed."
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Imapsync script with authuser
+
+#!/bin/bash
+USERS="/mnt/user50.txt"
+for i in cat $USERS
+do
+imapsync --host1 144.76.5.120 --user1 $i --authuser1 sixthstar@vcareherbsconcept.com --password1 Sixth*54321 --host2 178.162.198.171 --user2 $i --authuser2 sixthstar@vcareherbsconcept.com --password2 Sixth*543211 --ssl1 --ssl2 --noauthmd5 --split1 100 --split2 100
+done
+
+Single user to another user
+imapsync --host1 "192.9.200.111" --user1 "dtl" --password1 "system@777" --host2 "88.99.26.119" --ssl2 --user2 "dtl@tightwell-dynamic.com" --password2 "system@777" --debug
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Daily Backup script:
+
+#!/bin/bash
+IFS="$"
+
+now=$(date +"%m-%d-%Y")
+mkdir -p /mnt/backup/$now
+tempdir=/mnt/backup/$now
+targetdir=/mnt/backup
+archivefile="`date +%Y-%m-%d_%H-%M`_legendit.tar"
+cd /var/cpanel/users
+
+find * | while read CPUSER; do
+  echo "Now processing ${CPUSER} ..."
+  /scripts/pkgacct ${CPUSER} $tempdir
+  done
+# Generating single archive file
+tar -cf  ${targetdir}/${archivefile} ${tempdir}
+rm -rf $tempdir
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. outofoffice box enabled script in Zimbra for whole domain :
+
+#!/bin/bash
+# Get a list of all email accounts
+accounts=$(zmprov -l gaa)
+
+# Loop through each account and set the zimbraPrefOutOfOfficeCacheDuration to 0
+for account in $accounts
+do
+   zmprov ma "$account" zimbraPrefOutOfOfficeCacheDuration 0
+done
+
+echo "zimbraPrefOutOfOfficeCacheDuration has been set to 0 for all users."
+
+===================================================================================================================================
+Auto-reply outbox enabled script for single user in the Zimbra server:
+
+#!/bin/bash
+
+# Set the user email address
+USER="singleuser@domain.com"
+
+# Set the zimbraPrefOutOfOfficeCacheDuration to 0 for the user
+echo "Setting zimbraPrefOutOfOfficeCacheDuration to 0 for $USER"
+zmprov ma $USER zimbraPrefOutOfOfficeCacheDuration 0
+
+echo "Completed setting zimbraPrefOutOfOfficeCacheDuration for $USER."
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. dllistwith users run by script
+
+#!/bin/bash
+# File: save_dl_members.sh
+
+input_file="dlistmemJUNE2024.txt"
+output_dir="/mnt/dlistwithmeJUNE2024"
+
+if [[ ! -f $input_file ]]; then
+    echo "File $input_file not found!"
+    exit 1
+fi
+
+if [[ ! -d $output_dir ]]; then
+    echo "Directory $output_dir not found!"
+    exit 1
+fi
+
+while read -r dl; do
+    if [[ ! -z "$dl" ]]; then
+        output_file="${output_dir}/${dl}.txt"
+        echo "Saving members of $dl to $output_file"
+        zmprov gdlm "$dl" > "$output_file"
+    fi
+done < "$input_file"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. Mail forwarding list for each ID's
+
+root@mail2 /mnt # su zimbra
+zimbra@mail2:/mnt$ for account in `zmprov -l gaa`; do zmprov ga $account zimbraPrefMailForwardingAddress; done > /mnt/hhfForwording.txt
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. Get & post script for all id's:
+
+GET script
+
+ #!/bin/bash
+USERS="/mnt/user.txt"
+for i in $(cat $USERS)
+do
+    /opt/zimbra/bin/zmmailbox -t 0 -z -m $i getRestURL "//?fmt=tgz" > /mnt/mailbackupuser/$i.tar.gz
+done
+
+
+For the single mail id GET :
+/opt/zimbra/bin/zmmailbox -t 0 -z -m nandhini.s@vcaregroup.in getRestURL '/?fmt=tgz' > /mnt/nandhini.s@vcaregroup.in.tar.gz
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Post Script:
+
+#!/bin/bash
+ USERS="/mnt/mailbkp"
+ for i in `cat $USERS`
+ do
+/opt/z/bin/zmmailbox -z -m $i postRestURL -u https://mail.vecurawellness.com "//?fmt=tgz" > /mnt/bkp/$i.tar.gz
+ done
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+If any error cause in post script try this:
+
+#!/bin/bash
+USERS="/mnt/postmigration/hhfactivemissed2740.txt"
+
+for i in $(cat $USERS); do
+    BACKUP_FILE="/mnt/hhfactivemissed19-03/220724-220724/$i.tar.gz"
+    if [ -f "$BACKUP_FILE" ]; then 
+        echo "Restoring mailbox for user: $i"
+        /opt/zimbra/bin/zmmailbox -t 0 -z -m $i postRestURL "//?fmt=tgz&resolve=skip" "$BACKUP_FILE"
+        if [ $? -eq 0 ]; then
+            echo "Successfully restored mailbox for user: $i"
+        else
+            echo "Failed to restore mailbox for user: $i"
+        fi
+    else
+        echo "Backup file for user $i not found: $BACKUP_FILE"
+    fi
+done
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+For the single mail ID post :
+/opt/zimbra/bin/zmmailbox -t 0 -z -m usha.s@vecurawellness.com postRestURL "/?fmt=tgz&resolve=skip" /mnt/nandhini.s@vcaregroup.in.tar.gz
+
+Note: If you face any issues in post in zextras use this below command for solution:
+
+/opt/zextras/bin/zmmailbox -z -v -m santhanam.d@vecurawellness.com -t 0 -u https://127.0.0.1:7071 postRestURL -u https://127.0.0.1:7071 "/?fmt=tgz&resolve=skip" /mnt/uploadnew/santhanam.tgz
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+8. Whole users and specific users mailbox size list
+
+#!/bin/bash
+
+# Path to the file containing the email addresses
+EMAIL_LIST="/mnt/mailboxsizefullbac"
+
+# Output file
+OUTPUT_FILE="userspace"
+
+# Initialize the output file
+echo "Email,Mailbox Size" > $OUTPUT_FILE
+
+# Read each account from the list and its mailbox size
+while IFS= read -r account; do
+    mbox_size=$(zmmailbox -z -m "$account" gms)
+    echo "Mailbox size of $account = $mbox_size"
+    echo "$account,$mbox_size" >> $OUTPUT_FILE
+done < $EMAIL_LIST
+
+echo "Mailbox sizes have been written to $OUTPUT_FILE"
+zimbra@mail1:/mnt$
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9. All users download mail by mentioned date script (pop users outlook) 
+
+zimbra@mail1:/mnt$ cat popuserscript.sh
+#!/bin/bash
+
+DATE="20240721000000Z"  # Adjust the desired cutoff date and time
+
+# Get a list of all user accounts in the domain
+USERS=$(zmprov -l gaa)
+
+# Loop through each user and set the zimbraPrefPop3DownloadSince attribute
+for USER in $USERS
+do
+    zmprov -l ma "$USER" zimbraPrefPop3DownloadSince $DATE
+done
+
+Note: Search for pop usersw list. IF we cant find that run it by all users no impact on that
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10. All mails incoming an outgoing copy for one mail id in cpanel
+
+# END - Included from /usr/local/cpanel/etc/exim/sysfilter/options/attachments
+
+# BEGIN - Included from /usr/local/cpanel/etc/exim/sysfilter/options/spam_rewrite
+# (Use the Basic Editor in the Exim Configuration Manager in WHM to change)
+# or manually edit /etc/exim.conf.localopts and run /scripts/buildeximconf
+if "${if def:header_X-Spam-Subject: {there}}" is there
+then
+    headers remove Subject
+    headers add "Subject: $rh_X-Spam-Subject:"
+    headers remove X-Spam-Subject
+endif
+
+if
+ $header_from: contains "support@sixthstar.org"
+ and $header_to: does not contain "sixthstar.org"
+then
+ fail text "Messages cannot be sent from $header_from to external domains. $header_to is not an internal domain."
+seen finish
+endif
+if not first_delivery
+then
+finish
+endif
+
+if first_delivery
+and ("$h_to:, $h_cc:" contains "accounts@nadeemleather.com")
+then
+unseen deliver "mails@nadeemleather.com"
+endif
+
+if $header_from: contains "accounts@nadeemleather.com"
+then
+unseen deliver "mails@nadeemleather.com"
+endif
+
+if first_delivery
+and ("$h_to:, $h_cc:" contains "alaska@nadeemleather.com")
+then
+unseen deliver "mails@nadeemleather.com"
+endif
+
+if $header_from: contains "alaska@nadeemleather.com"
+then
+unseen deliver "mails@nadeemleather.com"
+endif
+
+if first_delivery
+and ("$h_to:, $h_cc:" contains "faheem@nadeemleather.com")
+then
+unseen deliver "mails@nadeemleather.com"
+endif
+
+if $header_from: contains "faheem@nadeemleather.com"
+then
+unseen deliver "mails@nadeemleather.com"
+endif
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11. Outgoing and incoming copy for a Zimbra: 
+
+How to Create auto Bcc for sender mails for Zimbra 8.7
+https://dilliganesh.wordpress.com/2016/09/21/how-to-create-auto-bcc-for-sender-mails-for-zimbra-8-7/
+[root@mail ~]# cd /opt/zimbra/conf  
+[root@mail conf]# cat sender_bcc
+@kryptosrebar.com       copy@kryptosrebar.com
+[root@mail conf]# cd /opt/zimbra/common/conf/
+[root@mail conf]# cat main.cf
+sender_bcc_maps = lmdb:/opt/zimbra/conf/sender_bcc
+postfix reload
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12. While migration we may use this script to add (update) the user in existing DL with existing users.
+
+#!/bin/bash
+# add all members to each of these distribution lists
+for i in `cat distributinlist.txt`
+do
+  # Get current members of the distribution list
+  current_members=$(zmprov gdlm $i)
+
+  for j in `grep -v '#' distributinlist_members/$i.txt | grep '@'`
+  do
+    # Check if the member is already in the distribution list
+    if echo "$current_members" | grep -q "^$j$"; then
+      echo "$j is already a member of list $i"
+    else
+      zmprov adlm $i $j
+      echo "$j member has been added to list $i"
+    fi
+  done
+done
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13. Get all Dl list owner ID
+
+This command gives, all the owner list of a DL in numeric ID way
+
+zmprov gdl abh@hindujahousingfinance.com |grep -w "zimbraACE:" |grep "ownDistList" |awk '{print $2}' > file.txt
+
+After we need to, change the numberic number id to human readble id by using the commands 
+
+while read -r id; do
+  name=$(zmprov -l ga $id | grep -w name | awk '{print $3}')
+  echo "Owner ID: $id, Name: $name"
+done < dl_owner_ids.txt
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14. If any error shows 
+#!/bin/sh
+# Script para visualizar redirecciones en Zimbra
+
+# File to store the output
+output_file="/mnt/for"
+
+# Clear previous content of output file
+> "$output_file"
+
+for account in $(/opt/zimbra/bin/zmprov -l gaa); do
+    forwardingaddress=$(/opt/zimbra/bin/zmprov ga $account | grep 'zimbraPrefMailForwardingAddress' | sed 's/zimbraPrefMailForwardingAddress: //')
+    if [ "$forwardingaddress" != "" ]; then
+        echo "$account is forwarding to $forwardingaddress" >> "$output_file"
+    else
+        forwardingaddress=""
+    fi
+done
+
+echo "Script execution completed. Output saved in: $output_file"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+84. Piler sync in new server
+
+1. create the domain in the name of piler.hindujahousingfinance.com 
+2. and create the new id piler.hindujahousingfinance.com
+3. after, that we need to add the single line in last on main.cf
+4. always_bcc = piler@piler.hindujahousingfinance.com 
+5. after added we need to done postfix reload with the help of crm.
+6. If failure error we face we need add the transport file
+
+#############How to set the Transport in zimbra
+Reference Link --   https://wiki.zimbra.com/wiki/Transport_Table_for_external_servers
+
+[root@mail ~]# touch /opt/zimbra/common/conf/transportfile
+[root@mail ~]# chown zimbra.zimbra /opt/zimbra/common/conf/transportfile
+su - zimbra
+[zimbra@mail ~]$ vi /opt/zimbra/common/conf/transportfile
+
+piler.hindujahousingfinance.com : [piler.hindujahousingfinance.com]
+
+[zimbra@mail ~]$  postmap /opt/zimbra/common/conf/transportfile
+
+[zimbra@mail ~]$  zmprov ms `zmhostname` zimbraMtaTransportMaps "lmdb:/opt/zimbra/common/conf/transportfile,proxy:ldap:/opt/zimbra/conf/ldap-transport.cf"
+
+[zimbra@mail ~]$  zmcontrol restart
+
+(The above mentioned is used for the mail delivery error in mailq)
+
+7 after all these need to inform piler team that we have done all these activities successfully
+8. taken the users list which need sync and handover that list to piler team, for imapsync for all these users
+9. in piler it shows only present syncing date, not the exact mail date. (It's biggest failure thing in the piler)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+85. Login portal:
+
+Leasweb
+https://secure.leaseweb.com/dashboard
+UserName: remo6979@gmail.com
+password: Nas$265172(6979*
+
+hetzner
+User name : aplnasheer@gmail.com     
+Password : Nas@sixth*23234  
+
+E2E
+https://myaccount.e2enetworks.com/accounts/login
+User name:nasheer@sixthstar.in
+Remo*6979*King*768 
+otp sent to nasheer sir
+
+Hostgator 
+https://support.microsoft.com/en-us/office/how-to-sign-in-to-hotmail-c378938b-c0eb-40c1-b99e-338dd9e776a8
+nasheerahamed@hotmail.com
+Nas@1234
+Security pin: 060979
+
+Zextras Ticket:
+Username: support@sixthstar.in
+Password: Welocme@123
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+86. If we need the report of all mail delivery and rejected mail counts for any specific id 
+
+1. cat /opt/zimbra/libexec/zmmsgtrace
+2. /opt/zimbra/libexec/zmdailyreport -m (run this command triggered mail will send to the admin id)
+3. to change the id to get reports
+zmlocalconfig smtp_destination (check this which is will be defaultly there)
+zmlocalconfig -e smtp_destination=test@kd1.sixthstar.org (used to change that)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+87. SSL for common name (common name means giving one domain ssl duration to another new domain.)
+
+(check the ssl.com and confirm the domains which is old domain and new domain)
+
+1 First generate CSR for the new domain which we want to put SSL
+2. [root@star mnt]# cd /ssl
+[root@star ssl]# ls
+commercial.csr  commercial.key  larch.in  sixthstar  vasanth  vigilarebp.com
+[root@star ssl]# mkdir pmchri.ac.in
+[root@star ssl]# cd pmchri.ac.in
+[root@star pmchri.ac.in]# openssl req -nodes -newkey rsa:2048 -keyout commercial.key -out commercial.csr
+Generating a 2048 bit RSA private key
+.+++
+......................+++
+writing new private key to 'commercial.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [XX]:IN
+State or Province Name (full name) []:TamilNadu
+Locality Name (eg, city) [Default City]:Chennai
+Organization Name (eg, company) [Default Company Ltd]:Medical college
+Organizational Unit Name (eg, section) []:Medical
+Common Name (eg, your name or your server's hostname) []:*.pmchri.ac.in
+Email Address []:
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+[root@star pmchri.ac.in]# ls
+commercial.csr  commercial.key
+[root@star pmchri.ac.in]# cat commercial.csr
+-----BEGIN CERTIFICATE REQUEST-----
+MIICvTCCAaUCAQAweDELMAkGA1UEBhMCSU4xEjAQBgNVBAgMCVRhbWlsTmFkdTEQ
+MA4GA1UEBwwHQ2hlbm5haTEYMBYGA1UECgwPTWVkaWNhbCBjb2xsZWdlMRAwDgYD
+VQQLDAdNZWRpY2FsMRcwFQYDVQQDDA4qLnBtY2hyaS5hYy5pbjCCASIwDQYJKoZI
+hvcNAQEBBQADggEPADCCAQoCggEBAMANyi3Q+xx1uvaJbAiD4Nidp88Wv3OMfr40
+C3V9q2yJ5ZGEQMbxAxzCq4OFohe71Cn6oaQ1L/XPlCULrcagb4dnlw/zlkaC7/z2
+oJZEwtfFpp2hcrpeoCa3SzO2FlEbTra130LXx2MAthjWQWnZywzVfCsBfGB73Yuh
+nBM2Yra9rqtC3kGI1qvnBu1ZkZkqyF4bMG08GjDVBzPdgLfZP1xfaLig5OwiMIsk
+Z5KOYVdvme4tV17qJppCQvR0l62ivI0qevwZ9XBzNxZ616mm9LMBZD1Al8fnFNPt
+S18m43f+1s8SdSvTZcl+FPwCfgWKJqDOGl1Yo6ohG8gcF0MQR88CAwEAAaAAMA0G
+CSqGSIb3DQEBCwUAA4IBAQCMd0dBG2/hopQSWd1NokQqneXGhR6XCeTe0V/nxs5h
+KjZIXGZQBcgtWFvpCI3B9g5zI4iCCjjfyrHV72BFBXvkaNdi03hX3bUT7T8OOVXk
+/wnyDgf1ZZPDQAE6L+EPDpzrBgMY3ksZCbI+IWTbCtJsrrWMWEG8NZaKgSt+jbVT
+eQUynu50rgBV9HOW/aBUPcbDROnS/lRs/joMjxZFYeTq5sRUf8SPW0VghdP1+BWB
+XFFWBHizy52mGKXyJTmPL/2hs7neBioymF0ZMQTdixKRJO9pOQzSGeOPlKXlq3Y0
+1NW+KbbnTKeEcbwnHs20liWs9SL34skukNHW3+d+Pipe
+-----END CERTIFICATE REQUEST-----
+[root@star pmchri.ac.in]#
+
+check in csr decorder in google (for the deails, which we above mentioned csr details)
+
+3. After generating this go to ssl.com & my ssl renew and start the below conversation.
+
+Hi 
+Hello! I am Yavneh. Thank you for contacting our Support Team!
+      we need a common name from *.prabaayurvedha.com to *.gaadimandi.com
+
+Are we talking about product ID k0grlr?
+      yes exactly
+
+As I can see, it is the renewal one, so, it should be activated for *.prabaayurvedha.com first. Then, we can change it to *.gaadimandi.com. Here is the guide on how to activate it: https://www.ssls.com/knowledgebase/okay-so-i-ordered-an-ssl-how-do-i-get-it-to-work-on-my-domain/
+      ok, I activated that now and then I generated the CSR to Id: oz5g4o. could you change the common name? For that are you there
+Yes, sure.
+
+As I can see, oz5g4o is already issued, so, you can reissue it for another domain. Here is the guide: https://www.ssls.com/knowledgebase/how-can-i-get-my-certificate-reissued
+     Please note that if the certificate is reissued for another domain name, the initial one will be not secured.
+
+Are we still connected?
+      kindly do this on your end. I have a CSR for the ID oz5g4o
+
+Do you mean to reissue the certificate?
+*.prabaayurvedha.com I need to change the common name to *.gaadimandi.com.
+this is the exact need
+
+kindly reactivate that *.prabaayurvedha.com and do it by your end are you there?
+Yes, I am here.
+
+we have CSR we will validate and download the certificate from our end you kindly change the common name to *.gaadimandi.com
+Sure.
+then only we upload CSR and get the certificate
+
+Please note that I can only activate the certificate, but you will need to validate it.
+Or I can change the CSR code to change the domain and issue the certificate for *.gaadimandi.com
+okay 
+okay, I will give the CSR key. for verification kindly use webmaster@gaadimandi.com
+Of course.
+
+check now
+I have validated, okay, kindly provide the certificate
+You can also download it from your Namecheap account. To download the certificate, you can go to the 'SSL Certificate ...
+Show All
+
+I'm so sorry, I mean, it can also be downloaded from your account from the page with the certificate details. You can refer to this guide on how to download the certificate: https://www.ssls.com/knowledgebase/can-i-download-certificate-somewhere-on-your-site/
+
+we are unable to find the SSL-issued certificate in the dashboard
+
+Please check again, the product ID is k0grlr
+okay thank you
+we have found that, thanks for your support
+
+BELOW STEPS ONLY FOR WINDOWS SERVER SSL: (ask to client)
+
+4. After that check by using the ID number, the new domain has been created in the old domain ID.
+5. Download that certificate and extract that in local after, ask the client to put the ssl in the server or else no need for that, if they told no need follow the below steps.
+6. After that go to https://decoder.link/converter
+7. select first one PEM to PKCS#12
+  in certificate file* give the security certificate which is in the extracted file 
+  in key send the private key commercial.key in txt format in notepad
+  in bundle file give the ca-bundle which is mentioned in the extracted file and set password Welcome@123
+8. after give convert and download it and send the mail to client by referring old mail related to this.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+88. cpanel single domain migration:
+
+1. go to old server and take the full backup by using cpanel backup option (After few minutes full backup is in file manger as tar.)
+2. go to the new server and go to transfer or restore a cpanel account option
+3. Select the transfer option upload a file to restore & also enable the overwrite, and give the restore
+4. see above there is a warning message and wait for 5 mins after again give the restore now its started migrating
+5. once it finished change all quatos and go to the dns 
+6. change the mx and spf and A records Ip belong to the new server
+7. drop the test mail and inform to the client
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+89. Taking the specific id backup from the incremental backup.
+
+1. go to the incremental backup folder and check the backup and create the file with script
+2. It reacts like all .tgz file untarred as folders and it automatically go to folder and fetch the specificfile and automatically posted the backup of the mail id.tar.gz 
+
+#!/bin/bash
+
+# Define the email details
+recipient="kalyani@splinfra.com"
+base_path="/mnt/backup/incremental_backup"
+
+# Extract all .tgz files
+for file in backup_file_*.tgz; do
+    tar -xzf "$file"
+done
+
+# Loop through each directory in the base path
+for dir in "$base_path"/*/; do
+    # Extract the directory name from the full path
+    dir_name=$(basename "$dir")
+
+    # Construct the full path to the file
+    file="$dir/kalyani@splinfra.com.tar.gz"
+
+    # Check if the file exists
+    if [ -f "$file" ]; then
+        # Post the file using zmmailbox
+        /opt/zimbra/bin/zmmailbox -z -v -m "$recipient" -t 0 -u https://127.0.0.1:7071 postRestURL -u https://127.0.0.1:7071 "/?fmt=tgz&resolve=skip" "$file"
+        echo "Posted $file to $recipient"
+    else
+        echo "File $file does not exist."
+    fi
+done
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+90. MX has an IP not a domain, if this case occurs there is a chance of mail reject in exim, but gmail, yahoo mails are working fine while sending mails to the domain.
+
+1. go to exim configuration manager in WHM
+2. go to Advance editor and search by ctrl F - Add additional configuration setting
+3. allow_mx_to_ip = true
+click add and in first box fill the allow_mx_to_ip and in the second box need to mentioned the true
+4. Click save and send the test mail to the domain.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+91. Extracting all incremental backup tar files to another storage box destination:
+
+#!/bin/bash
+
+# Define the source directory containing the tar files
+SOURCE_DIR="/mnt/backup/incremental_backup1"  # Update this path to where your .tgz files are located
+
+# Define the destination directory where files will be extracted
+DEST_DIR="/mnt/increbacrestore"
+
+# Ensure the destination directory exists
+mkdir -p "$DEST_DIR"
+
+# Loop through all .tgz files in the source directory
+shopt -s nullglob  # This ensures the loop does not run if no files are found
+for tar_file in "$SOURCE_DIR"/*.tgz; do
+    # Check if there are no .tgz files to process
+    if [ ! -e "$tar_file" ]; then
+        echo "No .tgz files found in $SOURCE_DIR" >&2
+        break
+    fi
+
+    # Extract the .tgz file into the destination directory
+    echo "Extracting $tar_file to $DEST_DIR"
+    tar -xzf "$tar_file" -C "$DEST_DIR"
+
+    # Check if extraction was successful
+    if [ $? -eq 0 ]; then
+        echo "Successfully extracted $tar_file"
+    else
+        echo "Failed to extract $tar_file" >&2
+    fi
+done
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+92. Once extraction of all users got finished the use this below post script to update all the tar.gz files, which is in the folders
+
+#!/bin/bash
+
+# Define the root directory containing the folders with .tar.gz files
+ROOT_DIR="/mnt/increbacrestore"  # Update this path
+
+# Define the file containing the list of user email addresses
+USERS="/mnt/highpriority"
+
+# Define the Zimbra server URL and path
+ZIMBRA_BIN="/opt/zimbra/bin/zmmailbox"  # Path to zmmailbox executable
+ZIMBRA_URL="https://127.0.0.1:7071"    # URL for the Zimbra server
+
+# Retry settings
+MAX_RETRIES=3
+RETRY_DELAY=30  # seconds
+
+# Ensure the root directory exists
+if [ ! -d "$ROOT_DIR" ]; then
+    echo "Root directory $ROOT_DIR does not exist." >&2
+    exit 1
+fi
+
+# Check if the USERS file exists
+if [ ! -f "$USERS" ]; then
+    echo "Users file $USERS does not exist." >&2
+    exit 1
+fi
+
+# Create a log file for script output
+LOG_FILE="/mnt/zimbra_backup_restore.log"
+touch "$LOG_FILE"
+chmod 644 "$LOG_FILE"
+
+# Read user email addresses from the USERS file
+while IFS= read -r email; do
+    if [ -n "$email" ]; then
+        echo "Processing backups for mail ID: $email" | tee -a "$LOG_FILE"
+
+        # Find all .tar.gz files for the current mail ID within all subdirectories
+        find "$ROOT_DIR" -type f -name "$email.tar.gz" | while read -r backup_file; do
+            if [ -f "$backup_file" ]; then
+                echo "Restoring mailbox for user: $email using file: $backup_file" | tee -a "$LOG_FILE"
+
+                # Attempt to upload the .tar.gz file to the Zimbra server with retry logic
+                attempt=1
+                while [ $attempt -le $MAX_RETRIES ]; do
+                    "$ZIMBRA_BIN" -t 0 -z -m "$email" -u "$ZIMBRA_URL" postRestURL "/?fmt=tgz&resolve=skip" "$backup_file" 2>&1 | tee -a "$LOG_FILE"
+
+                    # Check if the upload was successful
+                    if [ ${PIPESTATUS[0]} -eq 0 ]; then
+                        echo "Successfully restored mailbox for user: $email using file: $backup_file" | tee -a "$LOG_FILE"
+                        break
+                    else
+                        echo "Failed to restore mailbox for user: $email using file: $backup_file. Attempt $attempt of $MAX_RETRIES" | tee -a "$LOG_FILE"
+                        attempt=$((attempt + 1))
+                        sleep "$RETRY_DELAY"
+                    fi
+                done
+
+                if [ $attempt -gt $MAX_RETRIES ]; then
+                    echo "Failed to restore mailbox for user: $email using file: $backup_file after $MAX_RETRIES attempts" | tee -a "$LOG_FILE"
+                fi
+            else
+                echo "Backup file for user $email not found: $backup_file" | tee -a "$LOG_FILE"
+            fi
+        done
+    fi
+done < "$USERS"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+93. API Postman credentials
+
+https://web.postman.co/
+Username: praneethsixthstar
+User email ID: praneeth@sixthstar.in
+Password: Fiit@123#
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+94. Zimbra milter service
+
+zmprov modifyConfig zimbraMilterServerEnabled TRUE
+zmmilterctl status
+zmprov grr dl tests@tneblocal.org usr test1@tneblocal.org sendToDistList
+zmprov grr dl tests@tneblocal.org pub -sendToDistList
+zmprov grr dl tests@tneblocal.org dom tneblocal.org -sendToDistList
+zmprov grr dl tests@tneblocal.org dom tneblocal.org -viewDistList
+
