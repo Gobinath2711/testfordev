@@ -1,4 +1,4 @@
-STEPS
+STEPS?
 Synopsis:
 1.  new mail ID in Zimbra admin console 
 2.  Add Multiple users in Zimbra
